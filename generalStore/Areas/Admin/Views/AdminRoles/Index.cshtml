@@ -1,0 +1,41 @@
+﻿@model IEnumerable<generalStore.Models.Role>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">List Roles</h6>
+            <a asp-action="Create" class="btn btn-primary">Create Roles</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark">
+                        <th scope="col"><input class="form-check-input" type="checkbox"></th>
+                        <th scope="col">Role Name</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td><input class="form-check-input" type="checkbox"></td>
+                            <td>@item.RoleName</td>
+                            <td>@item.RoleDescription</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.RoleId" class="btn btn-sm btn-primary">Edit</a>
+                                <a asp-action="Details" asp-route-id="@item.RoleId" class="btn btn-sm btn-primary">Details</a>
+                                <a asp-action="Delete" asp-route-id="@item.RoleId" class="btn btn-sm btn-primary">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

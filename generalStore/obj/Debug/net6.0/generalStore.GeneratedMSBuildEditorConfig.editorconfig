@@ -1,0 +1,257 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = generalStore
+build_property.RootNamespace = generalStore
+build_property.ProjectDir = D:\Project\generalStore\generalStore\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\Project\generalStore\generalStore
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminCategories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminCategories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminCategories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminCategories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminCategories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminCustomers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DdXN0b21lcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminCustomers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DdXN0b21lcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminCustomers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DdXN0b21lcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminCustomers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DdXN0b21lcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminCustomers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DdXN0b21lcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminProducts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminProducts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminProducts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminProducts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminProducts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminRoles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminRoles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminRoles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminRoles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/AdminRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/Shared/_SidebarStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9TaWRlYmFyU3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Accounts/DangKyTaiKhoan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGFuZ0t5VGFpS2hvYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Accounts/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Accounts/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Cart/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Cart/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Contact/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Products/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Products/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Products/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Products/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Shared/Components/CartWidget/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFdpZGdldFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Shared/Components/Imagebar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSW1hZ2ViYXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Shared/Components/JustArrived/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSnVzdEFycml2ZWRcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Shared/Components/Navbar/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2YmFyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Shared/Components/Trandy/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVHJhbmR5XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Shared/_Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Shared/_ReturnProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SZXR1cm5Qcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/generalStore/generalStore/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-8kss57rtqq
+
+[D:/Project/generalStore/generalStore/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ghqnzndxio

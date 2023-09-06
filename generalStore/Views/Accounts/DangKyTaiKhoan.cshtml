@@ -1,0 +1,69 @@
+﻿@model generalStore.Models.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "DangKyTaiKhoan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid position-relative bg-white d-flex p-0">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Sign Up Start -->
+    <div class="container-fluid">
+        <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <a href="index.html" class="">
+                            <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>DASHMIN</h3>
+                        </a>
+                        <h3>Sign Up</h3>
+                    </div>
+                    <form asp-action="DangKyTaiKhoan">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-floating mb-3">
+                        <label for="floatingText">Full Name</label>
+                        <input type="text" asp-for="FullName" class="form-control" id="floatingText" placeholder="jhondoe">
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label for="floatingInput">Email address</label>
+                        <input type="email" asp-for="Email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label for="floatingInput">Phone Number</label>
+                        <input type="tel" asp-for="Phone" class="form-control" id="floatingInput" placeholder="0123456789">
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <label for="floatingPassword">Password</label>
+                        <input type="password" asp-for="Password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <label for="floatingPassword">Confirm Password</label>
+                        <input type="password" asp-for="ConfirmPassword" class="form-control" id="floatingPassword" placeholder="Password">
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <a href="">Forgot Password</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign Up</button>
+                    <p class="text-center mb-0">Already have an Account? <a href="">Sign In</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up End -->
+</div>

@@ -1,0 +1,70 @@
+﻿@model generalStore.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-sm-12 col-xl-6">
+    <div class="bg-light rounded h-100 p-4">
+        <h3 class="mb-4">Create Category</h3>
+        
+        <div class="form-floating mb-3">           
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+            <label for="floatingInput">Category Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Category Photo</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+        </div>
+        
+        <div class="form-floating mb-3">   
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+            <label for="floatingInput">Category Order</label>
+        </div>    
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-action="Index" type="submit" class="btn btn-primary">Back to list</a>
+    </div>
+</div>
+
+
+
+<h1>Create</h1>
+
+<h4>Category</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CategoryName" class="control-label"></label>
+                <input asp-for="CategoryName" class="form-control" />
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryPhoto" class="control-label"></label>
+                <input asp-for="CategoryPhoto" class="form-control" />
+                <span asp-validation-for="CategoryPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryOrder" class="control-label"></label>
+                <input asp-for="CategoryOrder" class="form-control" />
+                <span asp-validation-for="CategoryOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

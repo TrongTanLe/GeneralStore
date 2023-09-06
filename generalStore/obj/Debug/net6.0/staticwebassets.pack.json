@@ -1,0 +1,1257 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\generalStore.bundle.scp.css",
+      "PackagePath": "staticwebassets\\generalStore.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Adminassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\css\\style.css",
+      "PackagePath": "staticwebassets\\Adminassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\img\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\Adminassets\\img\\testimonial-1.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\img\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\Adminassets\\img\\testimonial-2.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\img\\user.jpg",
+      "PackagePath": "staticwebassets\\Adminassets\\img\\user.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\js\\main.js",
+      "PackagePath": "staticwebassets\\Adminassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\chart\\chart.min.js",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\chart\\chart.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\tempusdominus\\js\\moment-timezone.min.js",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\tempusdominus\\js\\moment-timezone.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\tempusdominus\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\tempusdominus\\js\\moment.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\Adminassets\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\Adminassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\Adminassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\css\\style.min.css",
+      "PackagePath": "staticwebassets\\css\\style.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\carousel-1.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel-1.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\carousel-2.jpg",
+      "PackagePath": "staticwebassets\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\cat-1.jpg",
+      "PackagePath": "staticwebassets\\img\\cat-1.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\cat-2.jpg",
+      "PackagePath": "staticwebassets\\img\\cat-2.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\cat-3.jpg",
+      "PackagePath": "staticwebassets\\img\\cat-3.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\cat-4.jpg",
+      "PackagePath": "staticwebassets\\img\\cat-4.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\cat-5.jpg",
+      "PackagePath": "staticwebassets\\img\\cat-5.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\cat-6.jpg",
+      "PackagePath": "staticwebassets\\img\\cat-6.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\offer-1.png",
+      "PackagePath": "staticwebassets\\img\\offer-1.png"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\offer-2.png",
+      "PackagePath": "staticwebassets\\img\\offer-2.png"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\payments.png",
+      "PackagePath": "staticwebassets\\img\\payments.png"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\product-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-1.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\product-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-2.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\product-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product-3.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\product-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product-4.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\product-5.jpg",
+      "PackagePath": "staticwebassets\\img\\product-5.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\product-6.jpg",
+      "PackagePath": "staticwebassets\\img\\product-6.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\product-7.jpg",
+      "PackagePath": "staticwebassets\\img\\product-7.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\product-8.jpg",
+      "PackagePath": "staticwebassets\\img\\product-8.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\user.jpg",
+      "PackagePath": "staticwebassets\\img\\user.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\vendor-1.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-1.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\vendor-2.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-2.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\vendor-3.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-3.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\vendor-4.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-4.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\vendor-5.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-5.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\vendor-6.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-6.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\vendor-7.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-7.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\vendor-8.jpg",
+      "PackagePath": "staticwebassets\\img\\vendor-8.jpg"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\mail\\contact.js",
+      "PackagePath": "staticwebassets\\mail\\contact.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\mail\\contact.php",
+      "PackagePath": "staticwebassets\\mail\\contact.php"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\mail\\jqBootstrapValidation.min.js",
+      "PackagePath": "staticwebassets\\mail\\jqBootstrapValidation.min.js"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_code.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_code.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_custom-forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_custom-forms.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_input-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_input-group.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_jumbotron.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_jumbotron.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_media.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_media.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_print.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_print.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_float.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_float.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_screen-reader.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_size.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-hide.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_text-hide.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\mixins\\_visibility.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\mixins\\_visibility.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_align.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_align.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_background.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_borders.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_borders.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_display.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_embed.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_embed.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_flex.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_flex.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_float.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_float.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_interactions.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_interactions.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_overflow.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_overflow.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_position.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_position.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_screenreaders.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_screenreaders.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_shadows.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_shadows.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_sizing.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_sizing.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_spacing.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_spacing.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_stretched-link.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_text.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\utilities\\_visibility.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\utilities\\_visibility.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "D:\\Project\\generalStore\\generalStore\\wwwroot\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\scss\\style.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.generalStore.props",
+      "PackagePath": "build\\generalStore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.generalStore.props",
+      "PackagePath": "buildMultiTargeting\\generalStore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.generalStore.props",
+      "PackagePath": "buildTransitive\\generalStore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.generalStore.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

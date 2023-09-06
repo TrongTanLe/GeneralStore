@@ -1,0 +1,25 @@
+﻿@model generalStore.Models.Category
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-sm-12 col-xl-6">
+    <div class="bg-light rounded h-100 p-4">
+        <h3 class="mb-4">Details Category</h3>
+        <hr />
+        <dl class="row mb-0">
+            <dt class="col-sm-4">Category Name</dt>
+            <dd class="col-sm-8">@Model.CategoryName</dd>
+
+            <dt class="col-sm-4">Category Photo</dt>
+            <dd class="col-sm-8">@Model.CategoryPhoto</dd>
+
+            <dt class="col-sm-4">Category Order</dt>
+            <dd class="col-sm-8">@Model.CategoryOrder</dd>           
+        </dl>
+        <a asp-action="Edit" asp-route-id="@Model?.CategoryId" class="btn btn-primary">Edit</a>
+        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    </div>
+</div>

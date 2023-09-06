@@ -1,0 +1,300 @@
+﻿@using generalStore.Models.ViewModels;
+@model ProductListViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Shop Start -->
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5">
+        <!-- Shop Sidebar Start -->
+        <div class="col-lg-3 col-md-12">
+            <!-- Price Start -->
+            <div class="border-bottom mb-4 pb-4">
+                <h5 class="font-weight-semi-bold mb-4">Filter by price</h5>
+                <form id="price-filter-form">
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="all" checked id="price-all">
+                        <label class="custom-control-label" for="price-all">All Price</label>
+                        <span class="badge border font-weight-normal">1000</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="0-100" id="price-1">
+                        <label class="custom-control-label" for="price-1">$0 - $100</label>
+                        <span class="badge border font-weight-normal">150</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="100-200" id="price-2">
+                        <label class="custom-control-label" for="price-2">$100 - $200</label>
+                        <span class="badge border font-weight-normal">295</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="200-300" id="price-3">
+                        <label class="custom-control-label" for="price-3">$200 - $300</label>
+                        <span class="badge border font-weight-normal">246</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="300-400" id="price-4">
+                        <label class="custom-control-label" for="price-4">$300 - $400</label>
+                        <span class="badge border font-weight-normal">145</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+                        <input type="checkbox" class="custom-control-input" val="400-500" id="price-5">
+                        <label class="custom-control-label" for="price-5">$400 - $500</label>
+                        <span class="badge border font-weight-normal">168</span>
+                    </div>
+                </form>
+            </div>
+            <!-- Price End -->
+            <!-- Color Start -->
+            <div class="border-bottom mb-4 pb-4">
+                <h5 class="font-weight-semi-bold mb-4">Filter by color</h5>
+                <form id="color-filter-form">
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="all" checked id="color-all">
+                        <label class="custom-control-label" for="price-all">All Color</label>
+                        <span class="badge border font-weight-normal">1000</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="Black" id="color-1">
+                        <label class="custom-control-label" for="color-1">Black</label>
+                        <span class="badge border font-weight-normal">150</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="White" id="color-2">
+                        <label class="custom-control-label" for="color-2">White</label>
+                        <span class="badge border font-weight-normal">295</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="Red" id="color-3">
+                        <label class="custom-control-label" for="color-3">Red</label>
+                        <span class="badge border font-weight-normal">246</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="Blue" id="color-4">
+                        <label class="custom-control-label" for="color-4">Blue</label>
+                        <span class="badge border font-weight-normal">145</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+                        <input type="checkbox" class="custom-control-input" val="Green" id="color-5">
+                        <label class="custom-control-label" for="color-5">Green</label>
+                        <span class="badge border font-weight-normal">168</span>
+                    </div>
+                </form>
+            </div>
+            <!-- Color End -->
+            <!-- Size Start -->
+            <div class="mb-5">
+                <h5 class="font-weight-semi-bold mb-4">Filter by size</h5>
+                <form id="size-filter-form">
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="all" checked id="size-all">
+                        <label class="custom-control-label" for="size-all">All Size</label>
+                        <span class="badge border font-weight-normal">1000</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="XS" id="size-1">
+                        <label class="custom-control-label" for="size-1">XS</label>
+                        <span class="badge border font-weight-normal">150</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="S" id="size-2">
+                        <label class="custom-control-label" for="size-2">S</label>
+                        <span class="badge border font-weight-normal">295</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="M" id="size-3">
+                        <label class="custom-control-label" for="size-3">M</label>
+                        <span class="badge border font-weight-normal">246</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" val="L" id="size-4">
+                        <label class="custom-control-label" for="size-4">L</label>
+                        <span class="badge border font-weight-normal">145</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+                        <input type="checkbox" class="custom-control-input" val="XL" id="size-5">
+                        <label class="custom-control-label" for="size-5">XL</label>
+                        <span class="badge border font-weight-normal">168</span>
+                    </div>
+                </form>
+            </div>
+            <button id="btnFilter" class="fa fa-search">Search Fillter</button>
+            <!-- Size End -->
+        </div>
+        <!-- Shop Sidebar End -->
+        <!-- Shop Product Start -->
+        
+        <div class="col-lg-9 col-md-12">
+            <div class="row pb-3" id="filtered-products">
+                <div class="col-12 pb-1">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <form asp-action="Search" asp-controller="Products">
+                            <div class="input-group">
+                                <input type="text" name="keywords" class="form-control" placeholder="Search for products">
+                                <div class="input-group-append">
+                                    <span class="input-group-text bg-transparent text-primary">
+                                        <button type="submit" value="Search"><i class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="dropdown ml-4">
+                            <button class="btn border dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                                Sort by
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
+                                <a class="dropdown-item" href="#">Latest</a>
+                                <a class="dropdown-item" href="#">Popularity</a>
+                                <a class="dropdown-item" href="#">Best Rating</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @foreach (var item in Model.Products)
+                {
+                    <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                        <div class="card product-item border-0 mb-4">
+                            <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                                <img class="img-fluid w-100" src="@item.ProductPhoto" alt="">
+                            </div>
+                            <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                <h6 class="text-truncate mb-3">@item.ProductName</h6>
+                                <div class="d-flex justify-content-center">
+                                    <h6>$@(
+                                        item.ProductPrice * (1 - item.ProductDiscount)
+                                        )</h6><h6 class="text-muted ml-2"><del>$@item.ProductPrice</del></h6>
+                                </div>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between bg-light border">
+                                <a href="/Products/Details/?id=@item.ProductId" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                                <a href="/Cart/AddToCart/?ProductId=@item.ProductId" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                }               
+                <div class="col-12 pb-1">
+                    <nav aria-label="Page navigation">
+
+                        <ul class="pagination justify-content-center mb-3">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+
+                            @for (int i = 1; i <= Model.PagingInfo.TotalPages; i++)
+                            {
+                                <li class="page-item"><a class="page-link" href="/Products/?productPage=@i">@i</a></li>
+                            }
+
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- Shop Product End -->
+    </div>
+</div>
+<!-- Shop End -->
+
+<script>
+    document.getElementById("btnFilter").addEventListener("click", function(){
+        var prices = getSelectedChecboxes("price-filter-form");
+        var colors = getSelectedChecboxes("color-filter-form");
+        var sizes = getSelectedChecboxes("size-filter-form");
+        var data = {
+            Prices: prices,
+            Colors: colors,
+            Sizes: sizes
+        }
+        fetch("/Products/GetFilteredProducts", {
+            method: "POST",
+            headers: {
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify(data)
+        }).then(function(response){
+            if(response.ok){
+                return response.text();
+            }else{
+                throw new Error("Error sending data to the controller")
+            }
+        }).then(function(results){
+            $("#filtered-products").html(results);
+            var TotalItems = document.querySelectorAll(".col-lg-4")
+            var PageSize = 9;
+            var TotalPages = Math.ceil(TotalItems.length/PageSize);
+            const div = document.createElement("div");
+            div.classList.add("col-12", "pb-1");
+            const nav = document.createElement("nav");
+            nav.classList.add("col-12", "pb-1");
+            const ul = document.createElement("ul");
+            ul.classList.add("pagination", "justify-content-center", "mb-3");
+            for(var i = 1; i <= TotalPages; i++){
+                var li = document.createElement("li");
+                li.classList.add("page-item");
+                var a = document.createElement("a");
+                a.classList.add("page-link");
+                a.innerHTML = i;
+                a.addEventListener('click', handlePageLinkClick)
+                a.setAttribute("href", "#")
+                li.appendChild(a);
+                ul.appendChild(li)
+            }
+            nav.appendChild(ul);
+            div.appendChild(nav);
+
+            document.getElementById("filtered-products").appendChild(div);
+            ShowPage(1);
+        })
+        .catch(function (error){
+            console.log("An error occured: ", error)
+        })
+    })
+
+    function handlePageLinkClick(event){
+        event.prevenDefault();
+
+        var pageNumber = parseInt(event.target.textContent);
+        ShowPage(pageNumber);
+    }
+
+    function ShowPage(pageNumber){
+        var productItems = document.querySelectorAll(".col-lg-4");
+        var itemsPerPage = 9;
+        var startIndex = (pageNumber-1)*itemsPerPage;
+        var endIndex = startIndex + itemsPerPage;
+
+        for(var i = 0; i<= productItems.length; i++){
+            if(i >= startIndex && i < endIndex){
+                productItems[i].style.display = 'block';
+            }else{
+                productItems[i].style.display = 'non';
+            }
+        }
+    }
+
+    function getSelectedChecboxes(formId){
+        var checkboxes = $('#'+ formId + ' input[type="checkbox"]:checked');
+        var values = []
+        checkboxes.each(function(){
+            values.push($(this).attr('val'))
+        })
+        return values;
+    }
+</script>
