@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using NuGet.Frameworks;
 using System.Security.Claims;
 
 namespace generalStore.Controllers
@@ -218,6 +219,43 @@ namespace generalStore.Controllers
             HttpContext.SignOutAsync();
             _toastNotification.Success("Logout success");
             return RedirectToAction("Index", "Home");
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult ChangePassword(ChangePasswordViewModel model)
+        {
+            try
+            {
+                var taikhoanID = HttpContext.Session.GetString("CustomerId");
+                if (taikhoanID == null)
+                {
+                    return RedirectToAction("Login", "Accounts");
+                }
+
+                if (ModelState.IsValid)
+                {
+                    var taikhoan = _context.Customers.Find(Convert.ToInt32(taikhoanID));
+                    if (taikhoan == null) return RedirectToAction("Login", "Accounts");
+
+                    var pass = (model.PasswordNow.Trim() + taikhoan.Salt.Trim()).ToMD5();
+                    if (pass == taikhoan.Password)
+                    {
+                        String passnew = (model.Password.Trim() + taikhoan.Salt.Trim()).ToMD5();
+                        taikhoan.Password = passnew;
+                        _context.Update(taikhoan);
+                        _context.SaveChanges();
+                        _toastNotification.Success("Change password success");
+                        return RedirectToAction("Dashboard", "Accounts");
+                    }
+                }                 
+            }catch
+            {
+                _toastNotification.Success("Wrong Change password");
+                return RedirectToAction("Dashboard", "Accounts");
+            }
+            _toastNotification.Success("Wrong Change password");
+            return RedirectToAction("Dashboard", "Accounts");
         }
     }
 }

@@ -1,0 +1,14 @@
+﻿@model List<generalStore.Models.ViewModels.CartItem>
+@if(Model != null && Model.Count() > 0)
+{
+    <a href="/Carts" class="btn border">
+        <i class="fas fa-shopping-cart text-primary"></i>
+        <span class="badge">@Model.Count()</span>
+    </a>
+}
+else
+{
+    <a href="#" class="btn border">
+        <i class="fas fa-shopping-cart text-primary"></i>
+    </a>
+}

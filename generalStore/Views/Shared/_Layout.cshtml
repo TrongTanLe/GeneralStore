@@ -87,6 +87,8 @@
                 <a href="/tai-khoan-cua-toi" class="btn border">
                     <i class="fas fa-heart text-primary"></i>
                 </a>
+
+                    @await Component.InvokeAsync("NumberCart")
             </div>
         </div>
     </div>
@@ -225,7 +227,7 @@
             <div class="col-lg-8 col-md-12">
                 <div class="row">
                     <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>    
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-dark mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Home</a>
                             <a class="text-dark mb-2" href="/Products"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
