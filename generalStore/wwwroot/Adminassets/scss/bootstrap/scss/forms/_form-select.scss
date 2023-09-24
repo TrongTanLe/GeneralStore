@@ -5,7 +5,7 @@
 
 .form-select {
   display: block;
-  width: 100%;
+  width: 0;
   padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
   font-family: $form-select-font-family;
   @include font-size($form-select-font-size);

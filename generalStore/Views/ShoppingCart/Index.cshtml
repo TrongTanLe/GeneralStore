@@ -35,23 +35,23 @@
                         {
                             <tr>
                                 <td class="align-middle"><img src="img/product-1.jpg" alt="@item.Product.ProductName" style="width: 50px;"> @item.Product.ProductName</td>
-                                <td class="align-middle">$@(item.Product.ProductPrice * (1 - item.Product.ProductDiscount))</td>
+                                <td class="align-middle">$@Model.Sum(x=>x.priceDiscount).ToString("#,##0")</td>
                                 <td class="align-middle">
                                     <div class="input-group quantity mx-auto" style="width: 100px;">
                                         <div class="input-group-btn">
-                                            <a href="" class="btn btn-sm btn-primary btn-minus">
+                                            <button class="btn btn-sm btn-primary btn-minus">
                                                 <i class="fa fa-minus"></i>
-                                            </a>
+                                            </button>
                                         </div>
-                                        <input data-mahh="@item.Product.ProductId" data-dongia="@item.Product.ProductPrice" type="text" class="cartItem form-control form-control-sm bg-secondary text-center" value="@item.amount">
+                                        <input data-mahh="@item.Product.ProductId" type="text" class="cartItem form-control form-control-sm bg-secondary text-center" value="@item.amount">
                                         <div class="input-group-btn">
-                                            <a href="" class="add-to-cart btn btn-sm btn-primary btn-plus">
+                                            <button @*data-mahh="@item.Product.ProductId" value="@item.amount"*@ class="btn btn-sm btn-primary btn-plus">
                                                 <i class="fa fa-plus"></i>
-                                            </a>
+                                            </button>
                                         </div>
                                     </div>
                                 </td>
-                                <td class="align-middle">$@((item.Product.ProductPrice * (1 - item.Product.ProductDiscount)) * item.amount)</td>
+                                <td class="align-middle">$@Model.Sum(x=>x.TotalMoney).ToString("#,##0")</td>
                                 <td class="align-middle"><a class="removecart btn btn-sm btn-primary" data-mahh="@item.Product.ProductId"><i class="fa fa-times"></i></a></td>
                             </tr>
                         }
@@ -85,9 +85,17 @@
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
                             <h5 class="font-weight-bold">Total</h5>
-                            <h5 class="font-weight-bold">$@Model.Sum(x=>x.TotalMoney).ToString("#,##0")</h5>
+                            <h5 class="font-weight-bold">$@Model.Sum(x=>x.TotalMoney + 10).ToString("#,##0")</h5>
                         </div>
-                        <a href="/Cart/Checkout" class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</a>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a href="/Cart/Checkout" class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</a>
+                        }
+                        else
+                        {
+                            <a href="/dang-nhap?returnUrl=/checkout" class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</a>
+                        }
+
                     </div>
                 </div>
             </div>
@@ -111,10 +119,10 @@
                         productID: productid
                     },
                     success: function (result) {
-                        if(result.success){
+                        if (result.success) {
                             loadHeaderCart();
                             window.location = 'carts';
-                        }                       
+                        }
                     },
                     error: function (rs) {
                         alert("Remove Cart Error");
@@ -130,7 +138,7 @@
                     dataType: "JSON",
                     data: {
                         productID: productid,
-                        amount : soluong
+                        amount: soluong
                     },
                     success: function (result) {
                         if (result.success) {

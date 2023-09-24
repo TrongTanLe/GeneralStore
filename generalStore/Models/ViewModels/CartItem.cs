@@ -8,6 +8,7 @@ namespace generalStore.Models.ViewModels
         public int CartId { get; set; }
         public Product? Product { get; set; }
         public int amount { get; set; }
-        public double TotalMoney => (double)(amount * Product.ProductDiscount);
+        public double priceDiscount => (double)(Product.ProductPrice * (1 - Product.ProductDiscount).Value);
+        public double TotalMoney => (double)(amount * priceDiscount);
     }
 }

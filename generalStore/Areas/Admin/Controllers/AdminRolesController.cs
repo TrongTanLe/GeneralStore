@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using generalStore.Data;
 using generalStore.Models;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace generalStore.Areas.Admin.Controllers
 {
@@ -14,10 +15,12 @@ namespace generalStore.Areas.Admin.Controllers
     public class AdminRolesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly INotyfService _toastNotification;
 
-        public AdminRolesController(ApplicationDbContext context)
+        public AdminRolesController(ApplicationDbContext context, INotyfService toastNotification)
         {
             _context = context;
+            _toastNotification = toastNotification;
         }
 
         // GET: Admin/AdminRoles
@@ -64,6 +67,7 @@ namespace generalStore.Areas.Admin.Controllers
             {
                 _context.Add(role);
                 await _context.SaveChangesAsync();
+                _toastNotification.Success("Create success");
                 return RedirectToAction(nameof(Index));
             }
             return View(role);
@@ -103,6 +107,7 @@ namespace generalStore.Areas.Admin.Controllers
                 {
                     _context.Update(role);
                     await _context.SaveChangesAsync();
+                    _toastNotification.Success("Update success");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -154,6 +159,7 @@ namespace generalStore.Areas.Admin.Controllers
             }
             
             await _context.SaveChangesAsync();
+            _toastNotification.Success("Delete success");
             return RedirectToAction(nameof(Index));
         }
 

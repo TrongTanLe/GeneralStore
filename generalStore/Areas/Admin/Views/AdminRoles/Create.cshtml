@@ -7,50 +7,29 @@
 
 <div class="col-sm-12 col-xl-6">
     <div class="bg-light rounded h-100 p-4">
-        <h3 class="mb-4">Create Category</h3>
-
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-            <label for="floatingInput">Role Name</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-            <label for="floatingInput">Description</label>
-        </div>
-        <button type="submit" value="Create" class="btn btn-primary">Create</button>
-        <a asp-action="Index" type="submit" class="btn btn-primary">Back to list</a>
-    </div>
-</div>
-
-<h1>Create</h1>
-
-<h4>Role</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="RoleName" class="control-label"></label>
-                <input asp-for="RoleName" class="form-control" />
+            <h3 class="mb-4">Create Category</h3>
+
+            <div class="form-floating mb-3">
+                <input asp-for="RoleName" type="text" class="form-control" id="floatingInput" />
+                <label for="floatingInput">Role Name</label>
                 <span asp-validation-for="RoleName" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="RoleDescription" class="control-label"></label>
-                <input asp-for="RoleDescription" class="form-control" />
+            <div class="form-floating mb-3">
+                <input asp-for="RoleDescription" type="text" class="form-control" id="floatingInput" />
+                <label for="floatingInput">Description</label>
                 <span asp-validation-for="RoleDescription" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+            <button type="submit" value="Create" class="btn btn-primary">Create</button>
+            <a asp-action="Index" type="submit" class="btn btn-primary">Back to list</a>
         </form>
-    </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+    </div>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

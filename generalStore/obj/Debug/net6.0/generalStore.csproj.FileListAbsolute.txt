@@ -1,3 +1,12 @@
+D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.csproj.AssemblyReference.cache
+D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.AssemblyInfoInputs.cache
+D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.AssemblyInfo.cs
+D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.csproj.CoreCompileInputs.cache
+D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.MvcApplicationPartsAssemblyInfo.cs
+D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.MvcApplicationPartsAssemblyInfo.cache
+D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.RazorAssemblyInfo.cache
+D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.RazorAssemblyInfo.cs
 D:\Project\generalStore\generalStore\bin\Debug\net6.0\appsettings.Development.json
 D:\Project\generalStore\generalStore\bin\Debug\net6.0\appsettings.json
 D:\Project\generalStore\generalStore\bin\Debug\net6.0\generalStore.staticwebassets.runtime.json
@@ -524,15 +533,6 @@ D:\Project\generalStore\generalStore\bin\Debug\net6.0\runtimes\win\lib\net6.0\Sy
 D:\Project\generalStore\generalStore\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Project\generalStore\generalStore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Project\generalStore\generalStore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.csproj.AssemblyReference.cache
-D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.GeneratedMSBuildEditorConfig.editorconfig
-D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.AssemblyInfoInputs.cache
-D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.AssemblyInfo.cs
-D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.csproj.CoreCompileInputs.cache
-D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.MvcApplicationPartsAssemblyInfo.cs
-D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.MvcApplicationPartsAssemblyInfo.cache
-D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.RazorAssemblyInfo.cache
-D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.RazorAssemblyInfo.cs
 D:\Project\generalStore\generalStore\obj\Debug\net6.0\staticwebassets\msbuild.generalStore.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Project\generalStore\generalStore\obj\Debug\net6.0\staticwebassets\msbuild.build.generalStore.props
 D:\Project\generalStore\generalStore\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.generalStore.props
@@ -550,3 +550,5 @@ D:\Project\generalStore\generalStore\obj\Debug\net6.0\refint\generalStore.dll
 D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.pdb
 D:\Project\generalStore\generalStore\obj\Debug\net6.0\generalStore.genruntimeconfig.cache
 D:\Project\generalStore\generalStore\obj\Debug\net6.0\ref\generalStore.dll
+D:\Project\generalStore\generalStore\bin\Debug\net6.0\PagedList.Core.dll
+D:\Project\generalStore\generalStore\bin\Debug\net6.0\PagedList.Core.Mvc.dll

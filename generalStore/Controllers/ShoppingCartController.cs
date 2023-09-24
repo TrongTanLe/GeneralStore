@@ -86,7 +86,7 @@ namespace generalStore.Controllers
             try
             {
                 List<CartItem> gioHang = GioHang;
-                CartItem item = GioHang.SingleOrDefault(p => p.Product.ProductId == productID);
+                CartItem item = gioHang.SingleOrDefault(p => p.Product.ProductId == productID);
                 if (item != null)
                 {
                     gioHang.Remove(item);
@@ -110,14 +110,14 @@ namespace generalStore.Controllers
             {
                 if(cart != null)
                 {
-                    CartItem item = GioHang.SingleOrDefault(p => p.Product.ProductId == productID);
+                    CartItem item = cart.SingleOrDefault(p => p.Product.ProductId == productID);
                     if (item != null && amount.HasValue)
                     {
                         item.amount = amount.Value;
                     }
                     HttpContext.Session.SetJson<List<CartItem>>("GioHang", cart);
                 }
-                
+                _toastNotification.Success("Update product success");
                 return Json(new { success = true });
             }
             catch

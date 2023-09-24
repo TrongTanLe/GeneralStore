@@ -26,5 +26,6 @@ namespace generalStore.Data
         public DbSet<Account> Accounts { get; set; }
         public DbSet<generalStore.Models.ViewModels.RegisterViewModel>? RegisterViewModel { get; set; }
         public DbSet<generalStore.Models.ViewModels.CartItem>? CartItem { get; set; }
+        public DbSet<generalStore.Models.ViewModels.MuaHangVM>? MuaHangVM { get; set; }
     }
 }

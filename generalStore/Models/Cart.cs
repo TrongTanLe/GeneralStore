@@ -39,6 +39,5 @@ namespace generalStore.Models
         public int CartLintID { get; set; }
         public Product Product { get; set; } = new();
         public int Quantity { get; set; }
-        public Billing Billing { get; set; } = new();
     }
 }
