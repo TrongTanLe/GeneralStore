@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using generalStore.Data;
 using generalStore.Models;
+using generalStore.Helpper;
+using PagedList.Core;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace generalStore.Areas.Admin.Controllers
 {
@@ -14,17 +17,62 @@ namespace generalStore.Areas.Admin.Controllers
     public class AdminProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly INotyfService _toastNotification;
 
-        public AdminProductsController(ApplicationDbContext context)
+        public AdminProductsController(ApplicationDbContext context, INotyfService toastNotification)
         {
             _context = context;
+            _toastNotification = toastNotification;
         }
 
         // GET: Admin/AdminProducts
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int page = 1, int CatID = 0)
         {
-            var applicationDbContext = _context.Products.Include(p => p.Category).Include(p => p.Color).Include(p => p.Size);
-            return View(await applicationDbContext.ToListAsync());
+            var pageNumber = page; /*== null || page <= 0 ? 1 : page.Value*/
+            var pageSize = Utilities.PAGE_SIZE;
+
+            List<Product> lsProducts = new List<Product>();
+
+            if (CatID != 0)
+            {
+                lsProducts = _context.Products
+                .AsNoTracking()
+                .Where(x => x.CategoryId == CatID)
+                .Include(x => x.Category)
+                .Include(x => x.Color)
+                .Include(x => x.Size)
+                .OrderByDescending(x => x.ProductId).ToList();
+            }
+            else
+            {
+
+                lsProducts = _context.Products
+                .AsNoTracking()
+                .Include(x => x.Category)
+                .Include(x => x.Color)
+                .Include(x => x.Size)
+                .OrderByDescending(x => x.ProductId).ToList();
+            }
+
+            PagedList<Product> models = new PagedList<Product>(lsProducts.AsQueryable(), pageNumber, pageSize);
+            ViewBag.CurrentCateID = CatID;
+            ViewBag.CurrentPage = pageNumber;
+
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", CatID);
+
+            return View(models);
+        }
+
+        public IActionResult Filtter(int CatID = 0)
+        {
+
+            var url = $"/Admin/AdminProducts?CatID={CatID}";
+            if (CatID == 0)
+            {
+                url = $"/Admin/AdminProducts";
+            }
+
+            return Json(new { status = "success", redirectUrl = url });
         }
 
         // GET: Admin/AdminProducts/Details/5
@@ -51,9 +99,9 @@ namespace generalStore.Areas.Admin.Controllers
         // GET: Admin/AdminProducts/Create
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId");
-            ViewData["ColorId"] = new SelectList(_context.Colors, "ColorId", "ColorId");
-            ViewData["SizeId"] = new SelectList(_context.Sizes, "SizeId", "SizeId");
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CategoryId", "CategoryName");
+            ViewData["ColorId"] = new SelectList(_context.Colors, "ColorId", "ColorName");
+            ViewData["SizeId"] = new SelectList(_context.Sizes, "SizeId", "SizeName");
             return View();
         }
 
@@ -62,15 +110,28 @@ namespace generalStore.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescription,CategoryId,ProductPrice,ProductDiscount,ProductPhoto,SizeId,ColorId,IsTrandy,IsArrived")] Product product)
+        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescription,CategoryId,ProductPrice,ProductDiscount,ProductPhoto,SizeId,ColorId,IsTrandy,IsArrived,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Title,Alias,MetaDesc,MetaKey,UnitsInStock")] Product product, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (ModelState.IsValid)
             {
+                product.ProductName = Utilities.ToTitleCase(product.ProductName);
+                if (fThumb != null) //fthumb = fproductPhoto
+                {
+                    string extension = Path.GetExtension(fThumb.FileName);
+                    string image = Utilities.SEOUrl(product.ProductName);
+                    product.ProductPhoto = await Utilities.UploadFile(fThumb, @"products", image.ToLower());
+                }
+                if (string.IsNullOrEmpty(product.ProductPhoto)) product.ProductPhoto = "default.jpg";
+                product.Alias = Utilities.SEOUrl(product.ProductName);
+                product.DateModified = DateTime.Now;
+                product.DateCreated = DateTime.Now;
+
                 _context.Add(product);
                 await _context.SaveChangesAsync();
+                _toastNotification.Success("Create success");
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
             ViewData["ColorId"] = new SelectList(_context.Colors, "ColorId", "ColorId", product.ColorId);
             ViewData["SizeId"] = new SelectList(_context.Sizes, "SizeId", "SizeId", product.SizeId);
             return View(product);
@@ -89,7 +150,7 @@ namespace generalStore.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
             ViewData["ColorId"] = new SelectList(_context.Colors, "ColorId", "ColorId", product.ColorId);
             ViewData["SizeId"] = new SelectList(_context.Sizes, "SizeId", "SizeId", product.SizeId);
             return View(product);
@@ -100,7 +161,7 @@ namespace generalStore.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescription,CategoryId,ProductPrice,ProductDiscount,ProductPhoto,SizeId,ColorId,IsTrandy,IsArrived")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescription,CategoryId,ProductPrice,ProductDiscount,ProductPhoto,SizeId,ColorId,IsTrandy,IsArrived,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Title,Alias,MetaDesc,MetaKey,UnitsInStock")] Product product, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (id != product.ProductId)
             {
@@ -111,8 +172,21 @@ namespace generalStore.Areas.Admin.Controllers
             {
                 try
                 {
+
+                    product.ProductName = Utilities.ToTitleCase(product.ProductName);
+                    if (fThumb != null)
+                    {
+                        string extension = Path.GetExtension(fThumb.FileName);
+                        string image = Utilities.SEOUrl(product.ProductName);
+                        product.ProductPhoto = await Utilities.UploadFile(fThumb, @"products", image.ToLower());
+                    }
+                    if (string.IsNullOrEmpty(product.ProductPhoto)) product.ProductPhoto = "default.jpg";
+                    product.Alias = Utilities.SEOUrl(product.ProductName);
+                    product.DateModified = DateTime.Now;
+
                     _context.Update(product);
                     await _context.SaveChangesAsync();
+                    _toastNotification.Success("Edit success");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -127,7 +201,7 @@ namespace generalStore.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
             ViewData["ColorId"] = new SelectList(_context.Colors, "ColorId", "ColorId", product.ColorId);
             ViewData["SizeId"] = new SelectList(_context.Sizes, "SizeId", "SizeId", product.SizeId);
             return View(product);
@@ -170,6 +244,7 @@ namespace generalStore.Areas.Admin.Controllers
             }
             
             await _context.SaveChangesAsync();
+            _toastNotification.Success("Delete success");
             return RedirectToAction(nameof(Index));
         }
 

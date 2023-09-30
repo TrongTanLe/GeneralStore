@@ -12,14 +12,14 @@ using generalStore.Data;
 namespace generalStore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230731100009_initDb")]
-    partial class initDb
+    [Migration("20230928194737_InitWebDB")]
+    partial class InitWebDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.20")
+                .HasAnnotation("ProductVersion", "6.0.21")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -76,6 +76,51 @@ namespace generalStore.Migrations
                     b.ToTable("Accounts");
                 });
 
+            modelBuilder.Entity("generalStore.Models.Attributes", b =>
+                {
+                    b.Property<int>("AttributeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AttributeId"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AttributeId");
+
+                    b.ToTable("Attributes");
+                });
+
+            modelBuilder.Entity("generalStore.Models.AttributesPrices", b =>
+                {
+                    b.Property<int>("AttributesPricesId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AttributesPricesId"), 1L, 1);
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("AttributeId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AttributesPricesId");
+
+                    b.HasIndex("AttributeId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("AttributesPrices");
+                });
+
             modelBuilder.Entity("generalStore.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
@@ -83,6 +128,9 @@ namespace generalStore.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1L, 1);
+
+                    b.Property<string>("Alias")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CategoryName")
                         .HasMaxLength(150)
@@ -94,6 +142,30 @@ namespace generalStore.Migrations
                     b.Property<string>("CategoryPhoto")
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("Cover")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Levels")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MetaDesc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaKey")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Published")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SchemaMarkup")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CategoryId");
 
@@ -125,24 +197,23 @@ namespace generalStore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerId"), 1L, 1);
 
-                    b.Property<bool>("Active")
+                    b.Property<bool?>("Active")
+                        .IsRequired()
                         .HasColumnType("bit");
 
                     b.Property<string>("Addres")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Avatar")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Birthday")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("District")
+                    b.Property<int?>("District")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
@@ -153,10 +224,10 @@ namespace generalStore.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("LastLogin")
+                    b.Property<DateTime?>("LastLogin")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("LocationId")
+                    b.Property<int?>("LocationId")
                         .HasColumnType("int");
 
                     b.Property<string>("Password")
@@ -168,10 +239,9 @@ namespace generalStore.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Salt")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Ward")
+                    b.Property<int?>("Ward")
                         .HasColumnType("int");
 
                     b.HasKey("CustomerId");
@@ -189,32 +259,28 @@ namespace generalStore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LocationId"), 1L, 1);
 
-                    b.Property<string>("Levels")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("Levels")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameWithType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("Parent")
+                        .HasColumnType("int");
+
                     b.Property<string>("ParentCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PathWithType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Slug")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("LocationId");
@@ -363,17 +429,41 @@ namespace generalStore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"), 1L, 1);
 
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Alias")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("BestSellers")
+                        .HasColumnType("bit");
+
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<int>("ColorId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("HomeFlag")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsArrived")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsTrandy")
                         .HasColumnType("bit");
+
+                    b.Property<string>("MetaDesc")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaKey")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductDescription")
                         .HasMaxLength(3000)
@@ -397,6 +487,15 @@ namespace generalStore.Migrations
                     b.Property<int>("SizeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("UnitsInStock")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Video")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("ProductId");
 
                     b.HasIndex("CategoryId");
@@ -417,7 +516,6 @@ namespace generalStore.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"), 1L, 1);
 
                     b.Property<string>("RoleDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RoleName")
@@ -455,16 +553,115 @@ namespace generalStore.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactStatusId"), 1L, 1);
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("TransactStatusId");
 
                     b.ToTable("TransactStatus");
+                });
+
+            modelBuilder.Entity("generalStore.Models.ViewModels.CartItem", b =>
+                {
+                    b.Property<int>("CartId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CartId"), 1L, 1);
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("amount")
+                        .HasColumnType("int");
+
+                    b.HasKey("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartItem");
+                });
+
+            modelBuilder.Entity("generalStore.Models.ViewModels.MuaHangVM", b =>
+                {
+                    b.Property<int>("CustomerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerId"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PaymentID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PhuongXa")
+                        .HasColumnType("int");
+
+                    b.Property<int>("QuanHuyen")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TinhThanh")
+                        .HasColumnType("int");
+
+                    b.HasKey("CustomerId");
+
+                    b.ToTable("MuaHangVM");
+                });
+
+            modelBuilder.Entity("generalStore.Models.ViewModels.RegisterViewModel", b =>
+                {
+                    b.Property<int>("CustomerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerId"), 1L, 1);
+
+                    b.Property<string>("ConfirmPassword")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.HasKey("CustomerId");
+
+                    b.ToTable("RegisterViewModel");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -680,13 +877,30 @@ namespace generalStore.Migrations
                     b.Navigation("Role");
                 });
 
+            modelBuilder.Entity("generalStore.Models.AttributesPrices", b =>
+                {
+                    b.HasOne("generalStore.Models.Attributes", "Attribute")
+                        .WithMany()
+                        .HasForeignKey("AttributeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("generalStore.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Attribute");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("generalStore.Models.Customer", b =>
                 {
                     b.HasOne("generalStore.Models.Location", "Location")
                         .WithMany()
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LocationId");
 
                     b.Navigation("Location");
                 });
@@ -754,6 +968,15 @@ namespace generalStore.Migrations
                     b.Navigation("Color");
 
                     b.Navigation("Size");
+                });
+
+            modelBuilder.Entity("generalStore.Models.ViewModels.CartItem", b =>
+                {
+                    b.HasOne("generalStore.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

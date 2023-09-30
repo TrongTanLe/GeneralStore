@@ -29,6 +29,16 @@ namespace generalStore.Models
         public Color? Color { get; set; }
         public bool IsTrandy { get; set; }
         public bool IsArrived { get; set; }
-
+        public string? Video { get; set; }
+        public DateTime? DateCreated { get; set; }
+        public DateTime? DateModified { get; set; }
+        public bool BestSellers { get; set; }
+        public bool HomeFlag { get; set; }
+        public bool Active { get; set; }
+        public string? Title { get; set; }
+        public string? Alias { get; set; }
+        public string? MetaDesc { get; set; }
+        public string? MetaKey { get; set; }
+        public int UnitsInStock { get; set; }
     }
 }

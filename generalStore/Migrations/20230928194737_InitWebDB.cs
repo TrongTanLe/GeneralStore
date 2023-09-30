@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace generalStore.Migrations
 {
-    public partial class initDb : Migration
+    public partial class InitWebDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -49,6 +49,19 @@ namespace generalStore.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Attributes",
+                columns: table => new
+                {
+                    AttributeId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Attributes", x => x.AttributeId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Categories",
                 columns: table => new
                 {
@@ -56,7 +69,16 @@ namespace generalStore.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CategoryName = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
                     CategoryPhoto = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: true),
-                    CategoryOrder = table.Column<int>(type: "int", nullable: false)
+                    CategoryOrder = table.Column<int>(type: "int", nullable: false),
+                    ParentId = table.Column<int>(type: "int", nullable: true),
+                    Levels = table.Column<int>(type: "int", nullable: true),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Alias = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MetaDesc = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MetaKey = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Published = table.Column<bool>(type: "bit", nullable: false),
+                    Cover = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SchemaMarkup = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -82,17 +104,39 @@ namespace generalStore.Migrations
                 {
                     LocationId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Slug = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NameWithType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PathWithType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ParentCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Levels = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Parent = table.Column<int>(type: "int", nullable: true),
+                    Levels = table.Column<int>(type: "int", nullable: true),
+                    Slug = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NameWithType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PathWithType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ParentCode = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Locations", x => x.LocationId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MuaHangVM",
+                columns: table => new
+                {
+                    CustomerId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TinhThanh = table.Column<int>(type: "int", nullable: false),
+                    QuanHuyen = table.Column<int>(type: "int", nullable: false),
+                    PhuongXa = table.Column<int>(type: "int", nullable: false),
+                    PaymentID = table.Column<int>(type: "int", nullable: false),
+                    Note = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MuaHangVM", x => x.CustomerId);
                 });
 
             migrationBuilder.CreateTable(
@@ -118,13 +162,30 @@ namespace generalStore.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "RegisterViewModel",
+                columns: table => new
+                {
+                    CustomerId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ConfirmPassword = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RegisterViewModel", x => x.CustomerId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
                     RoleId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoleName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RoleDescription = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    RoleDescription = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -150,8 +211,8 @@ namespace generalStore.Migrations
                 {
                     TransactStatusId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -272,17 +333,17 @@ namespace generalStore.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Birthday = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Avatar = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Addres = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Avatar = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Addres = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LocationId = table.Column<int>(type: "int", nullable: false),
-                    District = table.Column<int>(type: "int", nullable: false),
-                    Ward = table.Column<int>(type: "int", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LocationId = table.Column<int>(type: "int", nullable: true),
+                    District = table.Column<int>(type: "int", nullable: true),
+                    Ward = table.Column<int>(type: "int", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Salt = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastLogin = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Salt = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastLogin = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Active = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -292,8 +353,7 @@ namespace generalStore.Migrations
                         name: "FK_Customers_Locations_LocationId",
                         column: x => x.LocationId,
                         principalTable: "Locations",
-                        principalColumn: "LocationId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "LocationId");
                 });
 
             migrationBuilder.CreateTable(
@@ -338,7 +398,18 @@ namespace generalStore.Migrations
                     SizeId = table.Column<int>(type: "int", nullable: false),
                     ColorId = table.Column<int>(type: "int", nullable: false),
                     IsTrandy = table.Column<bool>(type: "bit", nullable: false),
-                    IsArrived = table.Column<bool>(type: "bit", nullable: false)
+                    IsArrived = table.Column<bool>(type: "bit", nullable: false),
+                    Video = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateModified = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    BestSellers = table.Column<bool>(type: "bit", nullable: false),
+                    HomeFlag = table.Column<bool>(type: "bit", nullable: false),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Alias = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MetaDesc = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MetaKey = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UnitsInStock = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -394,6 +465,53 @@ namespace generalStore.Migrations
                         principalTable: "TransactStatus",
                         principalColumn: "TransactStatusId",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AttributesPrices",
+                columns: table => new
+                {
+                    AttributesPricesId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AttributeId = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<int>(type: "int", nullable: true),
+                    Active = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AttributesPrices", x => x.AttributesPricesId);
+                    table.ForeignKey(
+                        name: "FK_AttributesPrices_Attributes_AttributeId",
+                        column: x => x.AttributeId,
+                        principalTable: "Attributes",
+                        principalColumn: "AttributeId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_AttributesPrices_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "ProductId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CartItem",
+                columns: table => new
+                {
+                    CartId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductId = table.Column<int>(type: "int", nullable: true),
+                    amount = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CartItem", x => x.CartId);
+                    table.ForeignKey(
+                        name: "FK_CartItem_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "ProductId");
                 });
 
             migrationBuilder.CreateTable(
@@ -472,6 +590,21 @@ namespace generalStore.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_AttributesPrices_AttributeId",
+                table: "AttributesPrices",
+                column: "AttributeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AttributesPrices_ProductId",
+                table: "AttributesPrices",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartItem_ProductId",
+                table: "CartItem",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Customers_LocationId",
                 table: "Customers",
                 column: "LocationId");
@@ -533,10 +666,22 @@ namespace generalStore.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "AttributesPrices");
+
+            migrationBuilder.DropTable(
+                name: "CartItem");
+
+            migrationBuilder.DropTable(
+                name: "MuaHangVM");
+
+            migrationBuilder.DropTable(
                 name: "OrderDetails");
 
             migrationBuilder.DropTable(
                 name: "Pages");
+
+            migrationBuilder.DropTable(
+                name: "RegisterViewModel");
 
             migrationBuilder.DropTable(
                 name: "Roles");
@@ -546,6 +691,9 @@ namespace generalStore.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Attributes");
 
             migrationBuilder.DropTable(
                 name: "Orders");

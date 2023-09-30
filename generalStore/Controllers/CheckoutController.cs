@@ -47,7 +47,7 @@ namespace generalStore.Controllers
                 model.FullName = khachhang.FullName;
                 model.Email = khachhang.Email;
                 model.Phone = khachhang.Phone;
-                model.Address = khachhang.Address;
+                model.Address = khachhang.Addres;
             }
             ViewData["lsTinhThanh"] = new SelectList(_context.Locations.Where(x => x.Levels == 1).OrderBy(x => x.Type).ToList(), "Locations", "Name");
             ViewBag.GioHang = cart;
@@ -69,12 +69,12 @@ namespace generalStore.Controllers
                 model.FullName = khachhang.FullName;
                 model.Email = khachhang.Email;
                 model.Phone = khachhang.Phone;
-                model.Address = khachhang.Address;
+                model.Address = khachhang.Addres;
 
                 khachhang.LocationId = muaHang.TinhThanh;
                 khachhang.District = muaHang.QuanHuyen;
                 khachhang.Ward = muaHang.PhuongXa;
-                khachhang.Address = muaHang.Address;
+                khachhang.Addres = muaHang.Address;
 
                 _context.Update(khachhang);
                 _context.SaveChanges();

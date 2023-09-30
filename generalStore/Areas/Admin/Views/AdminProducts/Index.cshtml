@@ -1,90 +1,121 @@
-﻿@model IEnumerable<generalStore.Models.Product>
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<generalStore.Models.Product>
 
 @{
-    ViewData["Title"] = "Index";
+    int CurrentPage = ViewBag.CurrentPage;
+    ViewData["Title"] = "Index" + CurrentPage;
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Index</h1>
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h4 class="mb-0">Danh sách sản phẩm : Page @CurrentPage</h4>
+            <select id="txtCatID" name="txtCatID" asp-items="@ViewBag.DanhMuc" style="width:25%" class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                <option selected>Chọn loại sản phẩm</option>
+                <option value="0" >Chọn tất cả</option>
+            </select>           
+            <a class="btn btn-sm btn-primary" asp-action="Create">Thêm mới sản phẩm</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark">
+                        <th scope="col">Id</th>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Loại sản phẩm</th>
+                        <th scope="col">Màu sản phẩm</th>
+                        <th scope="col">Kích cỡ sản phẩm</th>
+                        <th scope="col">Giá sản phẩm</th>
+                        <th scope="col">Tồn kho</th>
+                        <th scope="col">Trạng thái</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>#@item.ProductId</td>
+                                <td><img width="80" height="80" src="/images/products/@item.ProductPhoto" alt="@item.Title" /></td>
+                                <td>@item.ProductName</td>
+                                <td>
+                                    <p>@item.Category.CategoryName</p>
+                                    @if (item.IsTrandy)
+                                    {
+                                        <p>Trandy</p>
+                                    }
+                                    else
+                                    {
+                                        <p>Arrived</p>
+                                    }
+                                </td>
+                                <td>@item.Color.ColorName</td>
+                                <td>@item.Size.SizeName</td>
+                                <td>@item.ProductPrice.Value.ToString("#,##0") VNĐ</td>
+                                <td>@item.UnitsInStock</td>
+                                <td>
+                                    @if(item.UnitsInStock > 0)
+                                    {
+                                            <h6>In Stock</h6>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductDiscount)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductPhoto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Size)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Color)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsTrandy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsArrived)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.CategoryId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductDiscount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductPhoto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Size.SizeId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color.ColorId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsTrandy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsArrived)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
-            </td>
-        </tr>
+                                    }
+                                    else
+                                    {
+                                            <h6>Out Stock</h6>
+                                    }
+
+                                </td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.ProductId">Edit</a>
+                                    <a class="btn btn-sm btn-primary" asp-action="Details" asp-route-id="@item.ProductId">Detail</a>
+                                    <a class="btn btn-sm btn-primary" asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+            <div aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <pager class="page-item" list="@Model" asp-area="Admin" asp-controller="AdminProducts" asp-route-CatID="@ViewBag.CurrentCateID" asp-action="Index" />
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            jQuery("#txtCatID").change(function () {
+                var catID = jQuery(this).children(":selected").attr("value");
+                catID = parseFloat(catID);
+                $('#txtCatID option')
+                    .removeAttr('selected');
+                $("#txtCatID > [value=" + catID + "]").attr("selected", "true");
+
+                $.ajax({
+                    url: "AdminProducts/Filtter",
+                    type: "GET",
+                    datatype: "JSON",
+                    data: {
+                        CatID: catID
+                    },
+                    async: true,
+                    success: function (results) {
+                        if (results.status == "success") {
+                            window.location.href = results.redirectUrl;
+                        }
+                    },
+                    error: function (xhr) {
+                        alert("Error");
+                    }
+                });
+            })
+        });
+    </script>
 }
-    </tbody>
-</table>
+

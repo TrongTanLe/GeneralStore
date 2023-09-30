@@ -7,7 +7,7 @@ namespace generalStore.Models
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TransactStatusId { get; set; }
-        public string Status { get; set; }
-        public string Description { get; set; }
+        public string? Status { get; set; }
+        public string? Description { get; set; }
     }
 }

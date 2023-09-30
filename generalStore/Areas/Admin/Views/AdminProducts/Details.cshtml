@@ -5,12 +5,18 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Details</h1>
+<h1>Thông tin sản phẩm</h1>
 
 <div>
     <h4>Product</h4>
     <hr />
     <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductId)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ProductName)
         </dt>
@@ -46,6 +52,7 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ProductPhoto)
+            <img width="100" height="100" src="~/images/products/@Model.ProductPhoto" alt="@Model.Title"/>
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Size)
@@ -70,6 +77,54 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.IsArrived)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BestSellers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BestSellers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HomeFlag)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HomeFlag)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateModified)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateModified)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MetaKey)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MetaKey)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MetaDesc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MetaDesc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UnitsInStock)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UnitsInStock)
         </dd>
     </dl>
 </div>

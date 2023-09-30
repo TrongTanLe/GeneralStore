@@ -5,32 +5,6 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<div class="col-sm-12 col-xl-6">
-    <div class="bg-light rounded h-100 p-4">
-        <h3 class="mb-4">Create Category</h3>
-        
-        <div class="form-floating mb-3">           
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-            <label for="floatingInput">Category Name</label>
-        </div>
-        <div class="form-floating mb-3">
-            <div class="mb-3">
-                <label for="formFile" class="form-label">Category Photo</label>
-                <input class="form-control" type="file" id="formFile">
-            </div>
-        </div>
-        
-        <div class="form-floating mb-3">   
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
-            <label for="floatingInput">Category Order</label>
-        </div>    
-        <button type="submit" class="btn btn-primary">Create</button>
-        <a asp-action="Index" type="submit" class="btn btn-primary">Back to list</a>
-    </div>
-</div>
-
-
-
 <h1>Create</h1>
 
 <h4>Category</h4>
@@ -53,6 +27,51 @@
                 <label asp-for="CategoryOrder" class="control-label"></label>
                 <input asp-for="CategoryOrder" class="form-control" />
                 <span asp-validation-for="CategoryOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParentId" class="control-label"></label>
+                <input asp-for="ParentId" class="form-control" />
+                <span asp-validation-for="ParentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Levels" class="control-label"></label>
+                <input asp-for="Levels" class="form-control" />
+                <span asp-validation-for="Levels" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Alias" class="control-label"></label>
+                <input asp-for="Alias" class="form-control" />
+                <span asp-validation-for="Alias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MetaDesc" class="control-label"></label>
+                <input asp-for="MetaDesc" class="form-control" />
+                <span asp-validation-for="MetaDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MetaKey" class="control-label"></label>
+                <input asp-for="MetaKey" class="form-control" />
+                <span asp-validation-for="MetaKey" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Published" /> @Html.DisplayNameFor(model => model.Published)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cover" class="control-label"></label>
+                <input asp-for="Cover" class="form-control" />
+                <span asp-validation-for="Cover" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SchemaMarkup" class="control-label"></label>
+                <input asp-for="SchemaMarkup" class="form-control" />
+                <span asp-validation-for="SchemaMarkup" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

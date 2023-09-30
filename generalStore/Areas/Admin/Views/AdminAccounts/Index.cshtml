@@ -7,10 +7,15 @@
 
 <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
+
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h3 class="mb-0">Quản lí tài khoản</h3>
-            <select asp-items="@ViewBag.QuyenTruyCap" class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
-                <option selected>Chọn quyền truy cập</option>
+            <select id="" name="" asp-items="@ViewBag.QuyenTruyCap" style="width:25%" class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                <option value="0" selected>Chọn quyền truy cập</option>
+                <b>@ViewBag.QuyenTruyCap</b>
+            </select>
+            <select id="idstatus" name="idstatus" asp-items="@ViewBag.lsTrangThai" style="width:25%" class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+                <option value="" selected>Chọn trạng thái</option>
             </select>
             <a asp-action="Create">Create New Account</a>
         </div>
@@ -19,28 +24,31 @@
                 <thead>
                     <tr class="text-dark">
                         <th scope="col">Id</th>
-                        <th scope="col">Full Name</th>
+                        <th scope="col">Họ và tên</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Role Name</th>
-                        <th scope="col">Active</th>
+                        <th scope="col">Số điện thoại</th>
+                        <th scope="col">Lần cuối đăng nhập</th>
+                        <th scope="col">Quyền truy cập</th>
+                        <th scope="col">Trạng thái</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @if(Model != null)
+                    @if (Model != null)
                     {
-                        foreach(var item in Model)
+                        foreach (var item in Model)
                         {
                             <tr>
                                 <td>@item.AccountId</td>
                                 <td>@item.FullName</td>
                                 <td>@item.Email</td>
                                 <td>@item.Phone</td>
+                                <td>@item.LastLogin</td>
                                 <td>@item.Role.RoleName</td>
                                 <td>
-                                    @if(item.Active)
+                                    @if (item.Active)
                                     {
+                                        <div class="spinner-grow text-success"></div>
                                         <h6>Active</h6>
                                     }
                                     else
@@ -49,92 +57,16 @@
                                     }
 
                                 </td>
-                                <td><a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.AccountId">Edit</a></td>
-                                <td><a class="btn btn-sm btn-primary" asp-action="Details" asp-route-id="@item.AccountId">Detail</a></td>
-                                <td><a class="btn btn-sm btn-primary" asp-action="Delete" asp-route-id="@item.AccountId">Delete</a></td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.AccountId">Edit</a>
+                                    <a class="btn btn-sm btn-primary" asp-action="Details" asp-route-id="@item.AccountId">Detail</a>
+                                    <a class="btn btn-sm btn-primary" asp-action="Delete" asp-route-id="@item.AccountId">Delete</a>
+                                </td>
                             </tr>
                         }
-                    }                  
+                    }
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Salt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Active)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Role)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LastLogin)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreateDate)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Salt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Active)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Role.RoleName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastLogin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreateDate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.AccountId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.AccountId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.AccountId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>

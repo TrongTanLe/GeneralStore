@@ -5,39 +5,98 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<div class="container-fluid pt-4 px-4">
-    <div class="bg-light text-center rounded p-4">
-        <div class="d-flex align-items-center justify-content-between mb-4">
-            <h6 class="mb-0">List Categorys</h6>
-            <a asp-action="Create" class="btn btn-primary">Create</a>
-        </div>
-        <div class="table-responsive">
-            <table class="table text-start align-middle table-bordered table-hover mb-0">
-                <thead>
-                    <tr class="text-dark">
-                        <th scope="col"><input class="form-check-input" type="checkbox"></th>
-                        <th scope="col">Category Name</th>
-                        <th scope="col">Category Photo</th>
-                        <th scope="col">Category Order</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach(var item in Model)
-                    {
-                        <tr>
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td>@item.CategoryName</td>
-                            <td>@item.CategoryPhoto</td>
-                            <td>@item.CategoryOrder</td>
-                            <td>
-                                <a asp-action="Edit" asp-route-id="@item.CategoryId" class="btn btn-sm btn-primary">Edit</a>
-                                <a asp-action="Details" asp-route-id="@item.CategoryId" class="btn btn-sm btn-primary">Details</a>
-                                <a asp-action="Delete" asp-route-id="@item.CategoryId" class="btn btn-sm btn-primary">Delete</a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryPhoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Levels)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MetaDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MetaKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Published)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cover)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchemaMarkup)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryPhoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Levels)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetaDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetaKey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Published)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cover)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SchemaMarkup)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CategoryId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CategoryId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CategoryId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

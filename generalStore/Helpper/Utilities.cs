@@ -22,7 +22,7 @@ namespace generalStore.Helpper
             }
         }
 
-        public static int PAGE_SIZE = 20;
+        public static int PAGE_SIZE = 10;
         public static void CreateIfMissing(string path)
         {
             bool folderExists = Directory.Exists(path);
@@ -87,7 +87,32 @@ namespace generalStore.Helpper
         }
         public static string SEOUrl(string url)
         {
-            return null;
+            url = url.ToLower();
+            url = Regex.Replace(url, @"[àáãạảăắằẳẵặâấầẩẫậ]", "a");
+            url = Regex.Replace(url, @"[èéẹẻẽêềếểễệ]", "e");
+            url = Regex.Replace(url, @"[ìíĩỉị]", "i");
+            url = Regex.Replace(url, @"[òóõọỏôốồổỗộơớờởỡợ]", "o");
+            url = Regex.Replace(url, @"[ùúũụủưứừửữự]", "u");
+            url = Regex.Replace(url, @"[ỳỵỷỹý]", "y");
+            url = Regex.Replace(url, @"[đ]", "d");
+
+
+            url = Regex.Replace(url.Trim(), @"[^0-9a-z-\s]", "").Trim();
+            url = Regex.Replace(url.Trim(), @"\s+", "-").Trim();
+
+            url = Regex.Replace(url.Trim(), @"\s", "-").Trim();
+            while (true)
+            {
+                if(url.IndexOf("--") != -1)
+                {
+                    url = url.Replace("--", "-");
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return url;
         }
         public static async Task<string> UploadFile(Microsoft.AspNetCore.Http.IFormFile file, string sDirectory, string newname)
         {

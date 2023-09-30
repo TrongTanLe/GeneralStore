@@ -8,7 +8,7 @@ namespace generalStore.Models
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RoleId { get; set; }
         [Required]
-        public string RoleName { get; set; }
-        public string RoleDescription { get; set; }
+        public string? RoleName { get; set; }
+        public string? RoleDescription { get; set; }
     }
 }

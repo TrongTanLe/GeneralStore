@@ -17,7 +17,7 @@ namespace generalStore.Controllers
             return View();
         }
 
-        public ActionResult QuanHuyenList(int LocationId)
+/*        public ActionResult QuanHuyenList(int LocationId)
         {
             var QuanHuyens = _context.Locations.OrderBy(x=> x.LocationId)
                 .Where(x => x.Parent == LocationId && x.Levels == 2)
@@ -33,7 +33,7 @@ namespace generalStore.Controllers
                 .OrderBy(x => x.Name)
                 .ToList();
             return Json(QuanXas);
-        }
+        }*/
 
     }
 }

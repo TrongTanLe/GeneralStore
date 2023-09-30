@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LO5KbihVZ9lPiMtE6iLOSjuLZcv3xcaRZgpJkUWN1mk=",
+  "Hash": "CjqGdTAlQFEtqmdOW5ZjxLTi7WAbFbePV6uBEXybmmA=",
   "Source": "generalStore",
   "BasePath": "_content/generalStore",
   "Mode": "Default",
@@ -3075,6 +3075,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Project\\generalStore\\generalStore\\wwwroot\\images\\products\\le-trong-tan.jpg",
+      "SourceId": "generalStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\generalStore\\generalStore\\wwwroot\\",
+      "BasePath": "_content/generalStore",
+      "RelativePath": "images/products/le-trong-tan.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\le-trong-tan.jpg"
     },
     {
       "Identity": "D:\\Project\\generalStore\\generalStore\\wwwroot\\img\\carousel-1.jpg",

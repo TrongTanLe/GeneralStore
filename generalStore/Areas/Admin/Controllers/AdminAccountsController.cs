@@ -26,7 +26,13 @@ namespace generalStore.Areas.Admin.Controllers
         // GET: Admin/AdminAccounts
         public async Task<IActionResult> Index()
         {
-            ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "Description");
+            ViewData["QuyenTruyCap"] = new SelectList(_context.Roles, "RoleId", "RoleDescription");
+
+            List<SelectListItem> lsTrangThai = new List<SelectListItem>();
+            lsTrangThai.Add(new SelectListItem() { Text = "Active", Value = "1" });
+            lsTrangThai.Add(new SelectListItem() { Text = "Block", Value = "0" });
+            ViewData["lsTrangThai"] = lsTrangThai;
+
             var applicationDbContext = _context.Accounts.Include(a => a.Role);
             return View(await applicationDbContext.ToListAsync());
         }
@@ -53,7 +59,7 @@ namespace generalStore.Areas.Admin.Controllers
         // GET: Admin/AdminAccounts/Create
         public IActionResult Create()
         {
-            ViewData["QuyenTruyCap"] = new SelectList(_context.Roles, "RoleId", "RoleDescription");
+            ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "RoleName");
             return View();
         }
 

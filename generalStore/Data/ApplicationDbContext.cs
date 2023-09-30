@@ -24,6 +24,8 @@ namespace generalStore.Data
         public DbSet<TransactStatus> TransactStatus { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Account> Accounts { get; set; }
+        public DbSet<AttributesPrices> AttributesPrices { get; set; }
+        public DbSet<Attributes> Attributes { get; set; }
         public DbSet<generalStore.Models.ViewModels.RegisterViewModel>? RegisterViewModel { get; set; }
         public DbSet<generalStore.Models.ViewModels.CartItem>? CartItem { get; set; }
         public DbSet<generalStore.Models.ViewModels.MuaHangVM>? MuaHangVM { get; set; }
