@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using generalStore.Data;
 using generalStore.Models;
+using generalStore.Helpper;
+using PagedList.Core;
+using AspNetCoreHero.ToastNotification.Abstractions;
 
 namespace generalStore.Areas.Admin.Controllers
 {
@@ -14,22 +17,30 @@ namespace generalStore.Areas.Admin.Controllers
     public class AdminCategoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly INotyfService _toastNotification;
 
-        public AdminCategoriesController(ApplicationDbContext context)
+        public AdminCategoriesController(ApplicationDbContext context, INotyfService toastNotification)
         {
             _context = context;
+            _toastNotification = toastNotification;
         }
 
         // GET: Admin/AdminCategories
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-              return _context.Categories != null ? 
-                          View(await _context.Categories.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Categories'  is null.");
-        }
+            var pageNumber = page == null || page <= 0 ? 1 : page.Value;
+            var pageSize = Utilities.PAGE_SIZE;
+            var lsCategories = _context.Categories
+                .AsNoTracking()
+                .OrderByDescending(x => x.CategoryId);
 
-        // GET: Admin/AdminCategories/Details/5
-        public async Task<IActionResult> Details(int? id)
+            PagedList<Category> models = new PagedList<Category>(lsCategories, pageNumber, pageSize);
+            ViewBag.CurrentPage = pageNumber;
+
+            return View(models);
+        }
+            // GET: Admin/AdminCategories/Details/5
+            public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Categories == null)
             {
@@ -57,12 +68,22 @@ namespace generalStore.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryId,CategoryName,CategoryPhoto,CategoryOrder,ParentId,Levels,Title,Alias,MetaDesc,MetaKey,Published,Cover,SchemaMarkup")] Category category)
+        public async Task<IActionResult> Create([Bind("CategoryId,CategoryName,CategoryPhoto,CategoryOrder,ParentId,Levels,Title,Alias,MetaDesc,MetaKey,Published,Cover,SchemaMarkup")] Category category, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (ModelState.IsValid)
             {
+                category.CategoryName = Utilities.ToTitleCase(category.CategoryName);
+                if (fThumb != null) //fthumb = fproductPhoto
+                {
+                    string extension = Path.GetExtension(fThumb.FileName);
+                    string image = Utilities.SEOUrl(category.CategoryPhoto) + extension;
+                    category.CategoryPhoto = await Utilities.UploadFile(fThumb, @"categories", image.ToLower());
+                }
+                if (string.IsNullOrEmpty(category.CategoryPhoto)) category.CategoryPhoto = "default.jpg";
+                category.Alias = Utilities.SEOUrl(category.CategoryName);             
                 _context.Add(category);
                 await _context.SaveChangesAsync();
+                _toastNotification.Success("Create success");
                 return RedirectToAction(nameof(Index));
             }
             return View(category);
@@ -89,7 +110,7 @@ namespace generalStore.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CategoryId,CategoryName,CategoryPhoto,CategoryOrder,ParentId,Levels,Title,Alias,MetaDesc,MetaKey,Published,Cover,SchemaMarkup")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("CategoryId,CategoryName,CategoryPhoto,CategoryOrder,ParentId,Levels,Title,Alias,MetaDesc,MetaKey,Published,Cover,SchemaMarkup")] Category category, Microsoft.AspNetCore.Http.IFormFile? fThumb)
         {
             if (id != category.CategoryId)
             {
@@ -100,8 +121,19 @@ namespace generalStore.Areas.Admin.Controllers
             {
                 try
                 {
+
+                    if (fThumb != null) //fthumb = fproductPhoto
+                    {
+                        string extension = Path.GetExtension(fThumb.FileName);
+                        string image = Utilities.SEOUrl(category.CategoryPhoto) + extension;
+                        category.CategoryPhoto = await Utilities.UploadFile(fThumb, @"categories", image.ToLower());
+                    }
+                    if (string.IsNullOrEmpty(category.CategoryPhoto)) category.CategoryPhoto = "default.jpg";
+                    category.Alias = Utilities.SEOUrl(category.CategoryName);
+
                     _context.Update(category);
                     await _context.SaveChangesAsync();
+                    _toastNotification.Success("Edit success");
                 }
                 catch (DbUpdateConcurrencyException)
                 {

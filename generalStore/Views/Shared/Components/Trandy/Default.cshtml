@@ -2,9 +2,9 @@
 
 <div class="container-fluid pt-5">
     <div class="text-center mb-4">
-        <h2 class="section-title px-5"><span class="px-2">Trandy Products</span></h2>
+        <h2 class="section-title px-5"><span class="px-2">Sản phẩm nổi bật</span></h2>
     </div>
-    <div class="row px-xl-5 pb-3">
+    <div class="trandy row px-xl-5 pb-3">
 
         @foreach(var item in Model)
         {        
@@ -12,3 +12,31 @@
         }
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $(".trandy .add-to-cart").click(function () {
+            var productid = $(this).data('id');
+            var soLuong = 1;
+            $.ajax({
+                url: '/api/cart/add',
+                type: "POST",
+                dataType: "JSON",
+                data: {
+                    productID: productid,
+                    amount: soLuong
+                },
+                success: function (response) {
+                    loadHeaderCart();
+                },
+                error: function (error) {
+                    alert("There was an error posting the data to the server: " + error.responseText);
+                }
+            });
+        });
+    });
+
+    function loadHeaderCart() {
+        $("#numberCart").load("/AjaxContent/Numbercart");
+    }
+</script>

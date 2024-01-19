@@ -1,79 +1,146 @@
 ﻿@model generalStore.Models.Product
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit: " + Model.ProductName;
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Edit</h1>
-
-<h4>Product</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ProductId" />
-            <div class="form-group">
-                <label asp-for="ProductName" class="control-label"></label>
-                <input asp-for="ProductName" class="form-control" />
-                <span asp-validation-for="ProductName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProductDescription" class="control-label"></label>
-                <input asp-for="ProductDescription" class="form-control" />
-                <span asp-validation-for="ProductDescription" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
-                <span asp-validation-for="CategoryId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProductPrice" class="control-label"></label>
-                <input asp-for="ProductPrice" class="form-control" />
-                <span asp-validation-for="ProductPrice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProductDiscount" class="control-label"></label>
-                <input asp-for="ProductDiscount" class="form-control" />
-                <span asp-validation-for="ProductDiscount" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProductPhoto" class="control-label"></label>
-                <input asp-for="ProductPhoto" class="form-control" />
-                <span asp-validation-for="ProductPhoto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeId" class="control-label"></label>
-                <select asp-for="SizeId" class="form-control" asp-items="ViewBag.SizeId"></select>
-                <span asp-validation-for="SizeId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ColorId" class="control-label"></label>
-                <select asp-for="ColorId" class="form-control" asp-items="ViewBag.ColorId"></select>
-                <span asp-validation-for="ColorId" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsTrandy" /> @Html.DisplayNameFor(model => model.IsTrandy)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsArrived" /> @Html.DisplayNameFor(model => model.IsArrived)
-                </label>
+<form asp-controller="AdminProducts" asp-action="Edit" asp-route-id="@Model.ProductId" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="@Model.ProductId"/>
+    <input type="hidden" asp-for="@Model.ProductPhoto"/>
+    <input type="hidden" asp-for="@Model.DateCreated"/>
+    <div class="col-sm-12 col-xl-6">
+        <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">Thêm mới sản phẩm</h6>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true">
+                        Basic Info
+                    </button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-profile" type="button" role="tab"
+                            aria-controls="nav-profile" aria-selected="false">
+                        Option Info
+                    </button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-contact" type="button" role="tab"
+                            aria-controls="nav-contact" aria-selected="false">
+                        Description
+                    </button>
+                </div>
+            </nav>
+            <div class="tab-content pt-3" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="form-floating mb-3">
+                        <input asp-for="ProductName" type="text" class="form-control" id="floatingInput" placeholder="TrongTan">
+                        <label for="floatingInput">Tên sản phẩm</label>
+                        <span asp-validation-for="ProductName" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Chọn hình ảnh</label>
+                        <input asp-for="ProductPhoto" class="form-control" name="fThumb" type="file" id="formFile">
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select asp-for="CategoryId" class="form-select" id="floatingSelect" asp-items="ViewBag.DanhMuc"
+                                aria-label="Floating label select example">
+                            <option selected>Chọn loại sản phẩm</option>
+                        </select>
+                        <label for="floatingSelect">Chọn loại sản phẩm</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select asp-for="SizeId" class="form-select" id="floatingSelect" asp-items="ViewBag.SizeId"
+                                aria-label="Floating label select example">
+                            <option selected>Chọn kích cỡ sản phẩm</option>
+                        </select>
+                        <label for="floatingSelect">Chọn kích cỡ sản phẩm</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select asp-for="ColorId" class="form-select" id="floatingSelect" asp-items="ViewBag.ColorId"
+                                aria-label="Floating label select example">
+                            <option selected>Chọn màu sản phẩm</option>
+                        </select>
+                        <span asp-validation-for="ProductPhoto" class="text-danger"></span>
+                        <label for="floatingSelect">Chọn màu sản phẩm</label>
+                    </div>
+                    <label for="floatingInput">Giá sản phẩm</label>
+                    <div class="input-group mb-3">
+                        <input asp-for="ProductPrice" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-text">VNĐ</span>
+                    </div>
+                    <label for="floatingInput">Giá Discount</label>
+                    <div class="input-group mb-3">
+                        <input asp-for="ProductDiscount" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-text">%</span>
+                    </div>
+                    <label for="floatingInput">Số lượng</label>
+                    <div class="input-group mb-3">
+                        <input asp-for="UnitsInStock" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-text">Cái</span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="IsTrandy" /> @Html.DisplayNameFor(model => model.IsTrandy)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="IsArrived" /> @Html.DisplayNameFor(model => model.IsArrived)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="HomeFlag" /> @Html.DisplayNameFor(model => model.HomeFlag)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="BestSellers" /> @Html.DisplayNameFor(model => model.BestSellers)
+                        </label>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="form-floating mb-3">
+                        <input asp-for="Title" type="text" class="form-control" id="floatingInput" placeholder="TrongTan">
+                        <label for="floatingInput">Title</label>
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="MetaDesc" type="text" class="form-control" id="floatingInput" placeholder="TrongTan">
+                        <label for="floatingInput">MetaDesc</label>
+                        <span asp-validation-for="MetaDesc" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="MetaKey" type="text" class="form-control" id="floatingInput" placeholder="TrongTan">
+                        <label for="floatingInput">MetaKey</label>
+                        <span asp-validation-for="MetaKey" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="form-floating">
+                        <textarea asp-for="ProductDescription" class="form-control" placeholder="Thông tin sản phẩm"
+                                  id="floatingTextarea" style="height: 150px;"></textarea>
+                        <label for="floatingTextarea"></label>
+                        <span asp-validation-for="ProductDescription" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
-        </form>
+            <div>
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</form>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

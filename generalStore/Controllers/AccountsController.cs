@@ -7,6 +7,7 @@ using generalStore.Models.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NuGet.Frameworks;
@@ -14,7 +15,7 @@ using System.Security.Claims;
 
 namespace generalStore.Controllers
 {
-    [Authorize] 
+    [Authorize]
     public class AccountsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -64,10 +65,10 @@ namespace generalStore.Controllers
         public IActionResult Dashboard()
         {
             var taikhoanID = HttpContext.Session.GetString("CustomerId");
-            if(taikhoanID != null)
+            if (taikhoanID != null)
             {
                 var khachhang = _context.Customers.AsNoTracking().SingleOrDefault(x => x.CustomerId == Convert.ToInt32(taikhoanID));
-                    if(khachhang != null)
+                if (khachhang != null)
                 {
                     return View(khachhang);
                 }
@@ -124,7 +125,7 @@ namespace generalStore.Controllers
                         /*return RedirectToAction("Dashboard", "Accounts");*/
                         return RedirectToAction("Index", "Home");
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         return RedirectToAction("DangKyTaiKhoan", "Accounts");
                     }
@@ -143,22 +144,22 @@ namespace generalStore.Controllers
         [Route("dang-nhap", Name = "DangNhap")]
         public IActionResult Login(string? returnUrl = null)
         {
-            /*var taikhoanID = HttpContext.Session.GetString("CustomerId");
-            if(taikhoanID != null)
+            var taikhoanID = HttpContext.Session.GetString("CustomerId");
+            if (taikhoanID != null)
             {
-                return RedirectToAction("Dashboard", "Account");
-            }*/
+                return RedirectToAction("Dashboard", "Accounts");
+            }
             return View();
         }
 
         [HttpPost]
         [AllowAnonymous]
         [Route("dang-nhap", Name = "DangNhap")]
-        public async Task<IActionResult> Login(LoginViewModel customer, string? returnUrl = null)
+        public async Task<IActionResult> Login(LoginViewModel customer, string? returnUrl)
         {
             try
             {
-                if(ModelState.IsValid)
+                if (ModelState.IsValid)
                 {
                     bool isEmail = Utilities.IsValidEmail(customer.UserName);
                     if (!isEmail) return View(customer);
@@ -167,15 +168,16 @@ namespace generalStore.Controllers
 
                     if (khachhang == null) return RedirectToAction("DangKyTaiKhoan");
                     string pass = (customer.Password + khachhang.Salt.Trim()).ToMD5();
-                    if(khachhang.Password != pass)
+                    if (khachhang.Password != pass)
                     {
                         _toastNotification.Success("Wrong password!");
                         return View(customer);
                     }
 
+                    khachhang.Avatar = "default.jpg";
                     //Kiem tra xem account co bi disable hay ko
 
-                    if(khachhang.Active == false)
+                    if (khachhang.Active == false)
                     {
                         return RedirectToAction("ThongBao", "Accounts");
                     }
@@ -184,6 +186,7 @@ namespace generalStore.Controllers
                     HttpContext.Session.SetString("CustomerId", khachhang.CustomerId.ToString());
                     var taikhoanID = HttpContext.Session.GetString("CustomerId");
                     //Identity
+
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, khachhang.FullName),
@@ -191,18 +194,12 @@ namespace generalStore.Controllers
                     };
                     ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "login");
                     ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-                    /*var authProperties = new AuthenticationProperties
-                    {
-                        AllowRefresh = true,
-                        ExpiresUtc = DateTimeOffset.Now.AddDays(1),
-                        IsPersistent = true,
-                    };*/
                     await HttpContext.SignInAsync(claimsPrincipal);
                     _toastNotification.Success("Login success!");
                     return RedirectToAction("Dashboard", "Accounts");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return RedirectToAction("DangKyTaiKhoan", "Accounts");
             }
@@ -248,14 +245,51 @@ namespace generalStore.Controllers
                         _toastNotification.Success("Change password success");
                         return RedirectToAction("Dashboard", "Accounts");
                     }
-                }                 
-            }catch
+                }
+            }
+            catch
             {
                 _toastNotification.Success("Wrong Change password");
                 return RedirectToAction("Dashboard", "Accounts");
             }
             _toastNotification.Success("Wrong Change password");
             return RedirectToAction("Dashboard", "Accounts");
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("CustomerId,FullName,Birthday,Avatar,Addres,Email,Phone,LocationId,District,Ward,CreateDate,Password,Salt,LastLogin,Active")] Customer customer, Microsoft.AspNetCore.Http.IFormFile? fThumb)
+        {
+            if (id != customer.CustomerId)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    if (fThumb != null) //fthumb = fproductPhoto
+                    {
+                        string extension = Path.GetExtension(fThumb.FileName);
+                        string image = Utilities.SEOUrl(customer.Avatar) + extension;
+                        customer.Avatar = await Utilities.UploadFile(fThumb, @"users", image.ToLower());
+                    }
+                    if (string.IsNullOrEmpty(customer.Avatar)) customer.Avatar = "default.jpg";
+
+                    _context.Update(customer);
+                    await _context.SaveChangesAsync();
+                    _toastNotification.Success("Edit success");
+                }
+                catch
+                {
+
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["LocationId"] = new SelectList(_context.Locations, "LocationId", "LocationId", customer.LocationId);
+            return View(customer);
         }
     }
 }

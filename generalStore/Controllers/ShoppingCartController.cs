@@ -21,6 +21,7 @@ namespace generalStore.Controllers
         [Route("carts", Name = "Cart")]
         public IActionResult Index()
         {
+           
             var lsGioHang = GioHang;
             return View(GioHang);
         }
@@ -61,12 +62,14 @@ namespace generalStore.Controllers
                 }
                 else
                 {
+                    
                     Product hh = _context.Products.SingleOrDefault(p => p.ProductId == productID);
+                    if (hh.ProductDiscount == null)  hh.ProductDiscount = 0;
                     item = new CartItem()
                     {
                         amount = amount.HasValue ? amount.Value : 1,
                         Product = hh
-                    };
+                    };                                     
                     gioHang.Add(item);
                 }
                 HttpContext.Session.SetJson<List<CartItem>>("GioHang", gioHang);

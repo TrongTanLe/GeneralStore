@@ -118,7 +118,7 @@ namespace generalStore.Areas.Admin.Controllers
                 if (fThumb != null) //fthumb = fproductPhoto
                 {
                     string extension = Path.GetExtension(fThumb.FileName);
-                    string image = Utilities.SEOUrl(product.ProductName);
+                    string image = Utilities.SEOUrl(product.ProductName) + extension;
                     product.ProductPhoto = await Utilities.UploadFile(fThumb, @"products", image.ToLower());
                 }
                 if (string.IsNullOrEmpty(product.ProductPhoto)) product.ProductPhoto = "default.jpg";
@@ -150,9 +150,9 @@ namespace generalStore.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
-            ViewData["ColorId"] = new SelectList(_context.Colors, "ColorId", "ColorId", product.ColorId);
-            ViewData["SizeId"] = new SelectList(_context.Sizes, "SizeId", "SizeId", product.SizeId);
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
+            ViewData["ColorId"] = new SelectList(_context.Colors, "ColorId", "ColorName", product.ColorId);
+            ViewData["SizeId"] = new SelectList(_context.Sizes, "SizeId", "SizeName", product.SizeId);
             return View(product);
         }
 
@@ -161,7 +161,7 @@ namespace generalStore.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescription,CategoryId,ProductPrice,ProductDiscount,ProductPhoto,SizeId,ColorId,IsTrandy,IsArrived,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Title,Alias,MetaDesc,MetaKey,UnitsInStock")] Product product, Microsoft.AspNetCore.Http.IFormFile fThumb)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescription,CategoryId,ProductPrice,ProductDiscount,ProductPhoto,SizeId,ColorId,IsTrandy,IsArrived,Video,DateCreated,DateModified,BestSellers,HomeFlag,Active,Title,Alias,MetaDesc,MetaKey,UnitsInStock")] Product product, Microsoft.AspNetCore.Http.IFormFile? fThumb)
         {
             if (id != product.ProductId)
             {
@@ -177,7 +177,7 @@ namespace generalStore.Areas.Admin.Controllers
                     if (fThumb != null)
                     {
                         string extension = Path.GetExtension(fThumb.FileName);
-                        string image = Utilities.SEOUrl(product.ProductName);
+                        string image = Utilities.SEOUrl(product.ProductName) + extension;
                         product.ProductPhoto = await Utilities.UploadFile(fThumb, @"products", image.ToLower());
                     }
                     if (string.IsNullOrEmpty(product.ProductPhoto)) product.ProductPhoto = "default.jpg";
@@ -201,9 +201,9 @@ namespace generalStore.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
-            ViewData["ColorId"] = new SelectList(_context.Colors, "ColorId", "ColorId", product.ColorId);
-            ViewData["SizeId"] = new SelectList(_context.Sizes, "SizeId", "SizeId", product.SizeId);
+            ViewData["DanhMuc"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
+            ViewData["ColorId"] = new SelectList(_context.Colors, "ColorId", "ColorName", product.ColorId);
+            ViewData["SizeId"] = new SelectList(_context.Sizes, "SizeId", "SizeName", product.SizeId);
             return View(product);
         }
 

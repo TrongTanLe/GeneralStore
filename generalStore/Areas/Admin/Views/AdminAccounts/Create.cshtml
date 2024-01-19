@@ -1,73 +1,54 @@
 ﻿@model generalStore.Models.Account
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Tạo mới tài khoản quản trị";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Create</h1>
-
-<h4>Account</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Salt" class="control-label"></label>
-                <input asp-for="Salt" class="form-control" />
-                <span asp-validation-for="Salt" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="FullName" class="control-label"></label>
-                <input asp-for="FullName" class="form-control" />
-                <span asp-validation-for="FullName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RoleId" class="control-label"></label>
-                <select asp-for="RoleId" class ="form-control" asp-items="ViewBag.RoleId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastLogin" class="control-label"></label>
-                <input asp-for="LastLogin" class="form-control" />
-                <span asp-validation-for="LastLogin" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreateDate" class="control-label"></label>
-                <input asp-for="CreateDate" class="form-control" />
-                <span asp-validation-for="CreateDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<form asp-controller="AdminAccounts" asp-action="Create" method="post" enctype="multipart/form-data">
+<div class="col-sm-12 col-xl-6">
+    <div  class="bg-light rounded h-100 p-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <h3 class="mb-4">Tạo tài khoản quản trị</h3>
+        <div class="form-floating mb-3">
+            <input asp-for="FullName" type="text" class="form-control" id="floatingInput"
+                   placeholder="Taya">
+            <label for="floatingInput">Full Name</label>
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Email" type="email" class="form-control" id="floatingInput"
+                   placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Phone" type="text" class="form-control" id="floatingInput"
+                   placeholder="0123456789">
+            <label for="floatingPassword">Phone Number</label>
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <select asp-for="RoleId" asp-items="ViewBag.QuyenTruyCap" class="form-select" id="floatingSelect"
+                    aria-label="Floating label select example">
+                <option selected>Quyền truy cập</option>
+            </select>
+            <label for="floatingSelect">Quyền truy cập</label>
+        </div>
+        <div class="form-group form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+            </label>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
+</form>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

@@ -10,6 +10,8 @@
         }, 1);
     };
     spinner();
+
+    
     
     
     // Back to top button

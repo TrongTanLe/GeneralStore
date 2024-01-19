@@ -14,7 +14,10 @@ namespace generalStore.Components
 
         public IViewComponentResult Invoke()
         {
-            return View(_context.Products.Where(p => p.IsArrived == true).ToList());
+            return View(_context.Products.Where(x => x.IsArrived == true)
+                .OrderByDescending(x => x.DateCreated)
+                .Take(8)
+                .ToList());
         }
     }
 }

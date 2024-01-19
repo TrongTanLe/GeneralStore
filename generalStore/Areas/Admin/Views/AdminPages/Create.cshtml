@@ -5,75 +5,89 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Create</h1>
-
-<h4>Page</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="PageName" class="control-label"></label>
-                <input asp-for="PageName" class="form-control" />
-                <span asp-validation-for="PageName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Contents" class="control-label"></label>
-                <input asp-for="Contents" class="form-control" />
-                <span asp-validation-for="Contents" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Thumb" class="control-label"></label>
-                <input asp-for="Thumb" class="form-control" />
-                <span asp-validation-for="Thumb" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Published" /> @Html.DisplayNameFor(model => model.Published)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MetaDesc" class="control-label"></label>
-                <input asp-for="MetaDesc" class="form-control" />
-                <span asp-validation-for="MetaDesc" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MetaJey" class="control-label"></label>
-                <input asp-for="MetaJey" class="form-control" />
-                <span asp-validation-for="MetaJey" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Alias" class="control-label"></label>
-                <input asp-for="Alias" class="form-control" />
-                <span asp-validation-for="Alias" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreateDate" class="control-label"></label>
-                <input asp-for="CreateDate" class="form-control" />
-                <span asp-validation-for="CreateDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Ordering" class="control-label"></label>
-                <input asp-for="Ordering" class="form-control" />
-                <span asp-validation-for="Ordering" class="text-danger"></span>
+<form asp-controller="AdminPages" asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="col-sm-12 col-xl-6">
+        <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">Thêm mới Page</h6>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                            aria-selected="true">
+                        THÔNG TIN PAGE
+                    </button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-profile" type="button" role="tab"
+                            aria-controls="nav-profile" aria-selected="false">
+                        THÔNG TIN SEO
+                    </button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-contact" type="button" role="tab"
+                            aria-controls="nav-contact" aria-selected="false">
+                        MÔ TẢ
+                    </button>
+                </div>
+            </nav>
+            <div class="tab-content pt-3" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="form-floating mb-3">
+                        <input asp-for="PageName" type="text" class="form-control" id="floatingInput" placeholder="TrongTan">
+                        <label for="floatingInput">Tên Page</label>
+                        <span asp-validation-for="PageName" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Ordering" type="text" class="form-control" id="floatingInput" placeholder="TrongTan">
+                        <label for="floatingInput">Ordering</label>
+                        <span asp-validation-for="Ordering" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Chọn hình ảnh</label>
+                        <input asp-for="Thumb" class="form-control" name="fThumb" type="file" id="formFile">
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Published" /> @Html.DisplayNameFor(model => model.Published)
+                        </label>
+                    </div>                   
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="form-floating mb-3">
+                        <input asp-for="Title" type="text" class="form-control" id="floatingInput" placeholder="TrongTan">
+                        <label for="floatingInput">Title</label>
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="MetaDesc" type="text" class="form-control" id="floatingInput" placeholder="TrongTan">
+                        <label for="floatingInput">MetaDesc</label>
+                        <span asp-validation-for="MetaDesc" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="MetaJey" type="text" class="form-control" id="floatingInput" placeholder="TrongTan">
+                        <label for="floatingInput">MetaKey</label>
+                        <span asp-validation-for="MetaJey" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="form-floating">
+                        <textarea asp-for="Contents" class="form-control" placeholder="Thông tin Page"
+                                  id="floatingTextarea" style="height: 150px;"></textarea>
+                        <label for="floatingTextarea"></label>
+                        <span asp-validation-for="Contents" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
-        </form>
+            <div>
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
     </div>
-</div>
+</form>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
 }

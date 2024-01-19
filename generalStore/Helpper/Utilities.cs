@@ -130,6 +130,7 @@ namespace generalStore.Helpper
                 }
                 else
                 {
+                    
                     using (var stream = new FileStream(pathFile, FileMode.Create))
                     {
                         await file.CopyToAsync(stream);

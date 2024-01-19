@@ -22,8 +22,9 @@
                     <tr class="text-dark">
                         <th scope="col">Id</th>
                         <th scope="col">Họ và Tên</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Địa chỉ</th>
-                        <th scope="col">Tỉnh/Thành</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -34,16 +35,15 @@
                         {
                             <tr>
                                 <td>@item.CustomerId</td>
+                                <td>@item.FullName</td>
+                                <td>@item.Phone</td>
+                                <td>@item.Email</td>
+                                <td>@item.Addres</td>                          
                                 <td>
-                                    <p>@item.FullName</p>
-                                    <p>@item.Phone</p>
-                                    <p>@item.Email</p>
-                                </td>
-                                <td>@item.Addres</td>
-                                <td>@item.Location.Name</td>                              
-                                <td><a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.CustomerId">Edit</a></td>
-                                <td><a class="btn btn-sm btn-primary" asp-action="Details" asp-route-id="@item.CustomerId">Detail</a></td>
-                                <td><a class="btn btn-sm btn-primary" asp-action="Delete" asp-route-id="@item.CustomerId">Delete</a></td>
+                                    <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.CustomerId">Edit</a>
+                                    <a class="btn btn-sm btn-primary" asp-action="Details" asp-route-id="@item.CustomerId">Detail</a>
+                                    <a class="btn btn-sm btn-primary" asp-action="Delete" asp-route-id="@item.CustomerId">Delete</a>
+                               </td>
                             </tr>
                         }
                     }

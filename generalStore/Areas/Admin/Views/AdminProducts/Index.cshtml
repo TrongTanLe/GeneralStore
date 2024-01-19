@@ -11,11 +11,14 @@
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h4 class="mb-0">Danh sách sản phẩm : Page @CurrentPage</h4>
-            <select id="txtCatID" name="txtCatID" asp-items="@ViewBag.DanhMuc" style="width:25%" class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
+            <select id="txtCatID" name="txtCatID" asp-items="@ViewBag.DanhMuc" style="width:25%; padding: 8px; margin:8px" class="form-select form-select-sm mb-2" aria-label=".form-select-sm example">
                 <option selected>Chọn loại sản phẩm</option>
                 <option value="0" >Chọn tất cả</option>
-            </select>           
-            <a class="btn btn-sm btn-primary" asp-action="Create">Thêm mới sản phẩm</a>
+            </select>
+            <form class="d-none d-md-flex ms-4">
+                <input id="keyword" name="keyword" class="form-control border-0" type="search" placeholder="Tìm kiếm">
+            </form>
+            <a style="padding: 8px" class="btn btn-sm btn-primary" asp-action="Create">Thêm mới sản phẩm</a>
         </div>
         <div class="table-responsive">
             <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -33,14 +36,14 @@
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="records_table">
                     @if (Model != null)
                     {
                         foreach (var item in Model)
                         {
                             <tr>
                                 <td>#@item.ProductId</td>
-                                <td><img width="80" height="80" src="/images/products/@item.ProductPhoto" alt="@item.Title" /></td>
+                                <td><img width="80" height="80" src="~/images/products/@item.ProductPhoto" alt="@item.Title" /></td>
                                 <td>@item.ProductName</td>
                                 <td>
                                     <p>@item.Category.CategoryName</p>
@@ -112,6 +115,26 @@
                     },
                     error: function (xhr) {
                         alert("Error");
+                    }
+                });
+            });
+
+            $("#keyword").keyup(function(){
+                var strkeyword = $('#keyword').val();
+                $.ajax({
+                    url: "/Admin/Search/FindProduct",
+                    type: "POST",
+                    datatype: "JSON",
+                    data: {
+                        keyword: strkeyword
+                    },
+                    async: true,
+                    success: function (results) {
+                        $("#records_table").html("");
+                        $("#records_table").html(results);
+                    },
+                    error: function (xhr) {
+                        alert('error');
                     }
                 });
             })

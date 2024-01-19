@@ -5,39 +5,49 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     List<generalStore.Models.ViewModels.CartItem> Carts = ViewBag.GioHang;
 }
+<!-- Navbar Start -->
+<partial name="/Views/_NavbarStart.cshtml" />
+<!-- Navbar End -->
+<!-- Page Header Start -->
+<div class="container-fluid bg-secondary mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Thanh toán</h1>
+        <div class="d-inline-flex">
+            <p class="m-0"><a href="/">Trang chủ</a></p>
+            <p class="m-0 px-2">-</p>
+            <p class="m-0">Thanh toán</p>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
 <!-- Checkout Start -->
 <div class="container-fluid pt-5">
     <div class="row px-xl-5">
         <div class="col-lg-8">
             <div class="mb-4">
-                <h4 class="font-weight-semi-bold mb-4">Billing Address</h4>
+                <h4 class="font-weight-semi-bold mb-4">Địa chỉ thanh toán</h4>
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <label>First Name</label>
-                        <input class="form-control" type="text" placeholder="John">
+                        <label>Họ và tên</label>
+                        <input asp-for="FullName" class="form-control" type="text" placeholder="John">
+                        <span asp-validation-for="FullName" class="text-danger"></span>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>Last Name</label>
-                        <input class="form-control" type="text" placeholder="Doe">
+                        <label>Số điện thoại</label>
+                        <input asp-for="Phone" class="form-control" type="text" placeholder="+123 456 789">
+                        <span asp-validation-for="Phone" class="text-danger"></span>
                     </div>
                     <div class="col-md-6 form-group">
                         <label>E-mail</label>
-                        <input class="form-control" type="text" placeholder="example@email.com">
-                    </div>
+                        <input asp-for="Email" class="form-control" type="text" placeholder="example@email.com">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>                  
                     <div class="col-md-6 form-group">
-                        <label>Mobile No</label>
-                        <input class="form-control" type="text" placeholder="+123 456 789">
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <label>Address Line 1</label>
+                        <label>Số nhà/Đường</label>
                         <input class="form-control" type="text" placeholder="123 Street">
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>Address Line 2</label>
-                        <input class="form-control" type="text" placeholder="123 Street">
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <label>Country</label>
+                        <label>Tỉnh/Thành phố</label>
                         <select class="custom-select">
                             <option selected>United States</option>
                             <option>Afghanistan</option>
@@ -46,60 +56,66 @@
                         </select>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>City</label>
-                        <input class="form-control" type="text" placeholder="New York">
+                        <label>Quận/Huyện</label>
+                        <select class="custom-select">
+                            <option selected>United States</option>
+                            <option>Afghanistan</option>
+                            <option>Albania</option>
+                            <option>Algeria</option>
+                        </select>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>State</label>
-                        <input class="form-control" type="text" placeholder="New York">
+                        <label>Phường/Xã</label>
+                        <select class="custom-select">
+                            <option selected>United States</option>
+                            <option>Afghanistan</option>
+                            <option>Albania</option>
+                            <option>Algeria</option>
+                        </select>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>ZIP Code</label>
-                        <input class="form-control" type="text" placeholder="123">
+                        <label>Ghi chú</label>
+                        <input asp-for="Note" class="form-control" type="text" placeholder="">
+                        <span asp-validation-for="Note" class="text-danger"></span>
                     </div>
                     <div class="col-md-12 form-group">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="newaccount">
-                            <label class="custom-control-label" for="newaccount">Create an account</label>
+                            <label class="custom-control-label" for="newaccount">Tạo một tài khoản</label>
                         </div>
                     </div>
                     <div class="col-md-12 form-group">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="shipto">
-                            <label class="custom-control-label" for="shipto" data-toggle="collapse" data-target="#shipping-address">Ship to different address</label>
+                            <label class="custom-control-label" for="shipto" data-toggle="collapse" data-target="#shipping-address">Vận chuyển đến địa chỉ khác</label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="collapse mb-4" id="shipping-address">
-                <h4 class="font-weight-semi-bold mb-4">Shipping Address</h4>
+                <h4 class="font-weight-semi-bold mb-4">Địa chỉ thanh toán</h4>
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <label>First Name</label>
-                        <input class="form-control" type="text" placeholder="John">
+                        <label>Họ và tên</label>
+                        <input asp-for="FullName" class="form-control" type="text" placeholder="John">
+                        <span asp-validation-for="FullName" class="text-danger"></span>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>Last Name</label>
-                        <input class="form-control" type="text" placeholder="Doe">
+                        <label>Số điện thoại</label>
+                        <input asp-for="Phone" class="form-control" type="text" placeholder="+123 456 789">
+                        <span asp-validation-for="Phone" class="text-danger"></span>
                     </div>
                     <div class="col-md-6 form-group">
                         <label>E-mail</label>
-                        <input class="form-control" type="text" placeholder="example@email.com">
+                        <input asp-for="Email" class="form-control" type="text" placeholder="example@email.com">
+                        <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>Mobile No</label>
-                        <input class="form-control" type="text" placeholder="+123 456 789">
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <label>Address Line 1</label>
+                        <label>Số nhà/Đường</label>
                         <input class="form-control" type="text" placeholder="123 Street">
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>Address Line 2</label>
-                        <input class="form-control" type="text" placeholder="123 Street">
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <label>Country</label>
+                        <label>Tỉnh/Thành phố</label>
                         <select class="custom-select">
                             <option selected>United States</option>
                             <option>Afghanistan</option>
@@ -108,16 +124,27 @@
                         </select>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>City</label>
-                        <input class="form-control" type="text" placeholder="New York">
+                        <label>Quận/Huyện</label>
+                        <select class="custom-select">
+                            <option selected>United States</option>
+                            <option>Afghanistan</option>
+                            <option>Albania</option>
+                            <option>Algeria</option>
+                        </select>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>State</label>
-                        <input class="form-control" type="text" placeholder="New York">
+                        <label>Phường/Xã</label>
+                        <select class="custom-select">
+                            <option selected>United States</option>
+                            <option>Afghanistan</option>
+                            <option>Albania</option>
+                            <option>Algeria</option>
+                        </select>
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>ZIP Code</label>
-                        <input class="form-control" type="text" placeholder="123">
+                        <label>Ghi chú</label>
+                        <input asp-for="Note" class="form-control" type="text" placeholder="">
+                        <span asp-validation-for="Note" class="text-danger"></span>
                     </div>
                 </div>
             </div>
@@ -127,28 +154,27 @@
             {
                 <div class="card border-secondary mb-5">
                     <div class="card-header bg-secondary border-0">
-                        <h4 class="font-weight-semi-bold m-0">Order Total</h4>
+                        <h4 class="font-weight-semi-bold m-0">Tổng đơn hàng</h4>
                     </div>
                     <div class="card-body">
-                        <h5 class="font-weight-medium mb-3">Products</h5>
+                        <h5 class="font-weight-medium mb-3">Sản phẩm</h5>
                         <div class="d-flex justify-content-between">
-                            <p></p>
-                            <p>$0</p>
+                            <p>Không có sản phẩm trong giỏ hàng</p>
                         </div>
                         <hr class="mt-0">
                         <div class="d-flex justify-content-between mb-3 pt-1">
-                            <h6 class="font-weight-medium">Subtotal</h6>
-                            <h6 class="font-weight-medium">$0</h6>
+                            <h6 class="font-weight-medium">Tổng tiền hàng</h6>
+                            <h6 class="font-weight-medium">0</h6>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-medium">Shipping</h6>
-                            <h6 class="font-weight-medium">$0</h6>
+                            <h6 class="font-weight-medium">Phí vận chuyển</h6>
+                            <h6 class="font-weight-medium">0</h6>
                         </div>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
-                            <h5 class="font-weight-bold">Total</h5>
-                            <h5 class="font-weight-bold">$0</h5>
+                            <h5 class="font-weight-bold">Tổng thanh toán</h5>
+                            <h5 class="font-weight-bold">0</h5>
                         </div>
                     </div>
                 </div>
@@ -157,28 +183,34 @@
             {
                 <div class="card border-secondary mb-5">
                     <div class="card-header bg-secondary border-0">
-                        <h4 class="font-weight-semi-bold m-0">Order Total</h4>
+                        <h4 class="font-weight-semi-bold m-0">Tổng đơn hàng</h4>
                     </div>
                     <div class="card-body">
-                        <h5 class="font-weight-medium mb-3">Products</h5>
-                        <div class="d-flex justify-content-between">
-                            @*<p>@Model.Lines.C</p>
-                        <p>$@(Model.Product.ProductPrice * (1 - Model.Product.ProductDiscount))</p>*@
-                        </div>
+                        <h5 class="font-weight-medium mb-3">Sản phẩm</h5>
+                        @if(Carts.Count() > 0)
+                        {
+                            foreach(var item in Carts)
+                            {
+                                <div class="d-flex justify-content-between">
+                                    <p>@item.Product.ProductName</p>
+                                    <p>@(item.TotalMoney) VNĐ</p>
+                                </div>
+                            }
+                        }                      
                         <hr class="mt-0">
                         <div class="d-flex justify-content-between mb-3 pt-1">
-                            <h6 class="font-weight-medium">Subtotal</h6>
-                            <h6 class="font-weight-medium">$</h6>
+                            <h6 class="font-weight-medium">Tổng tiền hàng</h6>
+                            <h6 class="font-weight-medium">@Carts.Sum(x=>x.TotalMoney) VNĐ</h6>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-medium">Shipping</h6>
-                            <h6 class="font-weight-medium">$10</h6>
+                            <h6 class="font-weight-medium">Phí vận chuyển</h6>
+                            <h6 class="font-weight-medium">10.000 VNĐ</h6>
                         </div>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
-                            <h5 class="font-weight-bold">Total</h5>
-                            <h5 class="font-weight-bold">$</h5>
+                            <h5 class="font-weight-bold">Tổng thanh toán</h5>
+                            <h5 class="font-weight-bold">@Carts.Sum(x=>x.TotalMoney + 10) VNĐ</h5>
                         </div>
                     </div>
                 </div>
@@ -197,88 +229,27 @@
                     <div class="form-group">
                         <div class="custom-control custom-radio">
                             <input type="radio" class="custom-control-input" name="payment" id="directcheck">
-                            <label class="custom-control-label" for="directcheck">Direct Check</label>
+                            <label class="custom-control-label" for="directcheck">Thanh toán trực tiếp</label>
                         </div>
                     </div>
-                    <div class="">
+                    <div class="form-group">
                         <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" name="payment" id="banktransfer">
-                            <label class="custom-control-label" for="banktransfer">Bank Transfer</label>
+                            <input type="radio" class="custom-control-input" name="payment" id="directcheck">
+                            <label class="custom-control-label" for="directcheck">Chuyển khoản qua ngân hàng</label>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer border-secondary bg-transparent">
-                    <button class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Place Order</button>
+                    <button type="submit" class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Đặt hàng</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Checkout End -->
-
-<h1>Index</h1>
-
-<h4>MuaHangVM</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Index">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FullName" class="control-label"></label>
-                <input asp-for="FullName" class="form-control" />
-                <span asp-validation-for="FullName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TinhThanh" class="control-label"></label>
-                <input asp-for="TinhThanh" class="form-control" />
-                <span asp-validation-for="TinhThanh" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="QuanHuyen" class="control-label"></label>
-                <input asp-for="QuanHuyen" class="form-control" />
-                <span asp-validation-for="QuanHuyen" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhuongXa" class="control-label"></label>
-                <input asp-for="PhuongXa" class="form-control" />
-                <span asp-validation-for="PhuongXa" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PaymentID" class="control-label"></label>
-                <input asp-for="PaymentID" class="form-control" />
-                <span asp-validation-for="PaymentID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Note" class="control-label"></label>
-                <input asp-for="Note" class="form-control" />
-                <span asp-validation-for="Note" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+<!-- Footer Start -->
+<partial name="/Views/_FooterStart.cshtml" />
+<!-- Footer End -->
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

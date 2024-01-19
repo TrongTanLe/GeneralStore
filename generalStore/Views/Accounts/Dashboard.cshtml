@@ -5,104 +5,92 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     generalStore.Models.ViewModels.ChangePasswordViewModel changePassword = new generalStore.Models.ViewModels.ChangePasswordViewModel();
 }
-
-<div id="accordion">
-    <div class="card">
-        <div class="card-header">
-            <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                Account information
-            </a>
-        </div>
-        <div id="collapseOne" class="collapse show" data-parent="#accordion">
-            <div class="card-body">
-@*                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Full Name | @Model.FullName</li>
-                    <li class="list-group-item">Second item</li>
-                    <li class="list-group-item">Third item</li>
-                    <li class="list-group-item">Fourth item</li>
-                </ul>*@
-                <div>
-                    <dl class="row">
-                        <dt class="col-sm-2">
-                            @Html.DisplayNameFor(model => model.FullName)
-                        </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.FullName)
-                        </dd>
-                        <dt class="col-sm-2">
-                            @Html.DisplayNameFor(model => model.Birthday)
-                        </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Birthday)
-                        </dd>
-                        <dt class="col-sm-2">
-                            @Html.DisplayNameFor(model => model.Avatar)
-                        </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Avatar)
-                        </dd>
-                        <dt class="col-sm-2">
-                            @Html.DisplayNameFor(model => model.Addres)
-                        </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Addres)
-                        </dd>
-                        <dt class="col-sm-2">
-                            @Html.DisplayNameFor(model => model.Email)
-                        </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Email)
-                        </dd>
-                        <dt class="col-sm-2">
-                            @Html.DisplayNameFor(model => model.Phone)
-                        </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Phone)
-                        </dd>
-                        <dt class="col-sm-2">
-                            @Html.DisplayNameFor(model => model.Location)
-                        </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Location.LocationId)
-                        </dd>
-                        <dt class="col-sm-2">
-                            @Html.DisplayNameFor(model => model.District)
-                        </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.District)
-                        </dd>
-                        <dt class="col-sm-2">
-                            @Html.DisplayNameFor(model => model.Ward)
-                        </dt>
-                        <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Ward)
-                        </dd>   
-                    </dl>
-                </div>
-            </div>
+<!-- Navbar Start -->
+<partial name="/Views/_NavbarStart.cshtml" />
+<!-- Navbar End -->
+<!-- Page Header Start -->
+<div class="container-fluid bg-secondary mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Thông tin tài khoản</h1>
+        <div class="d-inline-flex">
+            <p class="m-0"><a href="/">Trang chủ</a></p>
+            <p class="m-0 px-2">-</p>
+            <p class="m-0">Thông tin tài khoản</p>
         </div>
     </div>
+</div>
+<!-- Page Header End -->
 
-    <div class="card">
-        <div class="card-header">
-            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                Change password
-            </a>
+<div class="container bootstrap snippet">
+    <div class="col-sm-9">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Thông tin tài khoản</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Thay đổi mật khẩu</a>
         </div>
-        <div id="collapseTwo" class="collapse" data-parent="#accordion">
-            <div class="card-body">
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <hr>
+                <form asp-controller="Accounts" asp-action="Edit" asp-route-id="@Model.CustomerId" method="post" enctype="multipart/form-data" class="form" id="registrationForm">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="@Model.CustomerId" />
+                    <input type="hidden" asp-for="@Model.Avatar" />
+                    <div class="d-flex">
+                        <div>
+                            <div class="form-group">
+                                <div class="text-center">
+                                    <img src="~/images/users/@Model.Avatar" class="avatar img-circle img-thumbnail" alt="avatar">
+                                    <h6>Thay đổi ảnh đại diện ...</h6>
+                                    <input asp-for="Avatar" name="fThumb" type="file" class="text-center center-block file-upload">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                                    <label for="first_name"><h5>Họ tên</h5></label>
+                                    <input type="text" asp-for="FullName" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                                    <label for="email"><h5>Email</h5></label>
+                                    <input type="email" asp-for="Email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                                    <label for="phone"><h5>Phone</h5></label>
+                                    <input type="text" asp-for="Phone" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-xs-6">
+                                    <label for="email"><h5>Location</h5></label>
+                                    <input type="text" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <br>
+                                    <button class="btn btn-lg btn-success" type="submit"> Save</button>
+                                    <a href="/logout" class="btn btn-lg btn-primary"> Logout</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <hr>
                 @await Html.PartialAsync("_ChangePasswordPartialView", changePassword)
             </div>
         </div>
-    </div>
+    </div><!--/tab-content-->
 
-    <div class="card">
-        <div class="card-header">
-            <a href="/logout" class="collapsed card-link">
-                Logout
-            </a>
-        </div>
-
-    </div>
-
-</div>
+</div><!--/row-->

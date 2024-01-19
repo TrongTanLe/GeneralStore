@@ -12,9 +12,9 @@ namespace generalStore.Models
         [StringLength(50)]
         public string Email { get; set; }
         [StringLength(50)]
-        public string Password { get; set; }
+        public string? Password { get; set; }
         [StringLength(6)]
-        public string Salt { get; set; }
+        public string? Salt { get; set; }
         [Required]
         public bool Active { get; set; }
         [StringLength(120)]

@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using generalStore.Data;
 using generalStore.Models;
+using generalStore.Helpper;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using PagedList.Core;
 
 namespace generalStore.Areas.Admin.Controllers
 {
@@ -21,11 +24,17 @@ namespace generalStore.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminPages
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-              return _context.Pages != null ? 
-                          View(await _context.Pages.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Pages'  is null.");
+            var pageNumber = page == null || page <= 0 ? 1 : page.Value;
+            var pageSize = Utilities.PAGE_SIZE;
+            var lsPages = _context.Pages
+                .AsNoTracking()
+                .OrderByDescending(x => x.PageId);
+
+            PagedList<generalStore.Models.Page> models = new PagedList<generalStore.Models.Page>(lsPages, pageNumber, pageSize);
+            ViewBag.CurrentPage = pageNumber;
+            return View(models);
         }
 
         // GET: Admin/AdminPages/Details/5
@@ -57,10 +66,20 @@ namespace generalStore.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PageId,PageName,Contents,Thumb,Published,Title,MetaDesc,MetaJey,Alias,CreateDate,Ordering")] Page page)
+        public async Task<IActionResult> Create([Bind("PageId,PageName,Contents,Thumb,Published,Title,MetaDesc,MetaJey,Alias,CreateDate,Ordering")] generalStore.Models.Page page, Microsoft.AspNetCore.Http.IFormFile fThumb)
         {
             if (ModelState.IsValid)
             {
+                if (fThumb != null) 
+                {
+                    string extension = Path.GetExtension(fThumb.FileName);
+                    string image = Utilities.SEOUrl(page.PageName);
+                    page.Thumb = await Utilities.UploadFile(fThumb, @"pages", image.ToLower());
+                }
+                if (string.IsNullOrEmpty(page.Thumb)) page.Thumb = "default.jpg";
+                page.Alias = Utilities.SEOUrl(page.PageName);
+                page.CreateDate = DateTime.Now;
+
                 _context.Add(page);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -89,7 +108,7 @@ namespace generalStore.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PageId,PageName,Contents,Thumb,Published,Title,MetaDesc,MetaJey,Alias,CreateDate,Ordering")] Page page)
+        public async Task<IActionResult> Edit(int id, [Bind("PageId,PageName,Contents,Thumb,Published,Title,MetaDesc,MetaJey,Alias,CreateDate,Ordering")] generalStore.Models.Page page, Microsoft.AspNetCore.Http.IFormFile? fThumb)
         {
             if (id != page.PageId)
             {
@@ -100,6 +119,15 @@ namespace generalStore.Areas.Admin.Controllers
             {
                 try
                 {
+                    if (fThumb != null)
+                    {
+                        string extension = Path.GetExtension(fThumb.FileName);
+                        string image = Utilities.SEOUrl(page.PageName);
+                        page.Thumb = await Utilities.UploadFile(fThumb, @"pages", image.ToLower());
+                    }
+                    if (string.IsNullOrEmpty(page.Thumb)) page.Thumb = "default.jpg";
+                    page.Alias = Utilities.SEOUrl(page.PageName);
+
                     _context.Update(page);
                     await _context.SaveChangesAsync();
                 }
